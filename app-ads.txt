@@ -1,1 +1,34 @@
+# ---------------------------
+# GOLDCOINWEB3 APP-ADS.TXT
+# Domain: goldcoinweb3.com
+# ---------------------------
+
+# --- GOOGLE ADMOB ---
 google.com, pub-7453907403877295, DIRECT, f08c47fec0942fa0
+
+
+# --- UNITY ADS (Verified Format) ---
+# Unity owns multiple seller domains; these all must be included.
+pubmatic.com, 156341, RESELLER
+rubiconproject.com, 21640, RESELLER
+improvedigital.com, 1879, RESELLER
+synacor.com, 82143, RESELLER
+yahoo.com, 577, RESELLER
+admanmedia.com, 772, RESELLER
+admanmedia.com, 773, RESELLER
+admanmedia.com, 471, RESELLER
+smaato.com, 1100051776, RESELLER
+spotx.tv, 318418, RESELLER
+spotx.tv, 305141, RESELLER
+spotxchange.com, 318418, RESELLER
+spotxchange.com, 305141, RESELLER
+aps.amazon.com, 8e0bbc3c-b88a-4d73-92d4-e93a77c99d37, DIRECT
+unity.com, 18968343364870, DIRECT
+
+
+# --- IRONSOURCE (Official Format) ---
+ironsrc.com, 2406f6e7d, DIRECT
+
+
+# --- INMOBI (Official Format) ---
+inmobi.com, 10000129297, DIRECT
