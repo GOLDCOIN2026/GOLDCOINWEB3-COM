@@ -52,12 +52,22 @@
         object-fit: cover;
         border-radius: 20px;
         box-shadow: 0 0 15px rgba(234,179,8,0.3);
-        transition: transform 0.3s;
+        transition: transform 0.5s, box-shadow 0.5s;
+        animation: glow 2s infinite alternate;
     }
 
     .photos img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(234,179,8,0.5);
+        transform: scale(1.1);
+        box-shadow: 0 0 35px rgba(234,179,8,0.8);
+    }
+
+    @keyframes glow {
+        0% {
+            box-shadow: 0 0 15px rgba(234,179,8,0.3);
+        }
+        100% {
+            box-shadow: 0 0 35px rgba(234,179,8,0.6);
+        }
     }
 
     .download-section {
@@ -100,7 +110,7 @@
 </style>
 
 <script>
-    // Shuffle photos array
+    // Shuffle photos on load
     function shufflePhotos() {
         const container = document.querySelector('.photos');
         const images = Array.from(container.querySelectorAll('img'));
@@ -110,7 +120,18 @@
         }
     }
 
-    window.onload = shufflePhotos;
+    // Shuffle photos continuously every 3 seconds
+    function autoShuffle() {
+        const container = document.querySelector('.photos');
+        const images = Array.from(container.querySelectorAll('img'));
+        const first = images.shift();
+        container.appendChild(first);
+    }
+
+    window.onload = function() {
+        shufflePhotos();
+        setInterval(autoShuffle, 3000); // shuffle every 3 seconds
+    }
 </script>
 
 </head>
