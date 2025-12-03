@@ -1,171 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Goldcoin",
+  "url": "https://goldcoinweb3.com",
+  "description": "Goldcoin - Earn free crypto rewards daily by spinning, boosting and referrals.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://goldcoinweb3.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>    
+    
+    <head>
+<!-- Basic SEO -->
+<meta name="description" content="Goldcoin - Earn free crypto rewards daily by spinning, boosting, referrals and more. Trusted Web3 earning app.">
+<meta name="keywords" content="goldcoin, gold coin earn, crypto earning, web3 rewards, spin to earn, faucet, free crypto, earn crypto fast">
+<meta name="author" content="Goldcoin Team">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook / WhatsApp / Twitter) -->
+<meta property="og:title" content="Goldcoin - Earn Crypto Fast">
+<meta property="og:description" content="Earn free crypto rewards daily by spinning and boosting. Join Goldcoin now.">
+<meta property="og:image" content="https://goldcoinweb3.com/scr/picture/logo.jpg">
+<meta property="og:url" content="https://goldcoinweb3.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Goldcoin - Earn Crypto Fast">
+<meta name="twitter:description" content="Earn crypto daily with Goldcoin spin & boost rewards.">
+<meta name="twitter:image" content="https://goldcoinweb3.com/scr/picture/logo.jpg">
+
+<!-- Mobile + SEO Boost -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://goldcoinweb3.com">
+
+<!-- Google Site Verification (optional) -->
+<!-- After you create a Search Console property, paste the verification code here -->
+<!-- <meta name="google-site-verification" content="YOUR_CODE_HERE"> -->
+
+    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gold Coin</title>
+<title>GOLD COIN</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Poppins", Arial, sans-serif;
-        background: linear-gradient(180deg, #000, #0b0b0b, #111);
-        color: #f5f5f5;
-        line-height: 1.5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* ---------------- GLOBAL ---------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-    header {
-        text-align: center;
-        padding: 50px 20px 20px 20px;
-    }
+/* ---------------- PARTICLE BACKGROUND ---------------- */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1a1a1a, #000);
+    z-index: -1;
+    overflow: hidden;
+}
 
-    .title {
-        font-size: 48px;
-        font-weight: bold;
-        background: linear-gradient(90deg, #ffcc33, #ffd966);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 20px;
-    }
+.particle {
+    position: absolute;
+    background: rgba(255, 215, 0, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px gold;
+    animation: floatUp 8s linear infinite;
+    filter: blur(1px);
+}
 
-    .bio {
-        max-width: 700px;
-        margin: 0 auto 40px auto;
-        font-size: 18px;
-        color: #ddd;
-    }
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.4); opacity: 0.3; }
+    100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
+}
 
-    .photos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 50px;
-    }
+/* ---------------- LOGO ---------------- */
+.logo {
+    width: 120px;
+    margin-top: 30px;
+    filter: drop-shadow(0 0 10px gold);
+}
 
-    .photos img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 0 0 15px rgba(234,179,8,0.3);
-        transition: transform 0.5s, box-shadow 0.5s;
-        animation: glow 2s infinite alternate;
-    }
+/* ---------------- TITLE ---------------- */
+.title {
+    margin-top: 10px;
+    font-size: 62px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ffe08a, #fff3c4, #ffe08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowTitle 2s infinite alternate;
+}
 
-    .photos img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 35px rgba(234,179,8,0.8);
-    }
+@keyframes glowTitle {
+    0% { text-shadow: 0 0 10px #ffcf40; }
+    100% { text-shadow: 0 0 25px #ffdd55; }
+}
 
-    @keyframes glow {
-        0% {
-            box-shadow: 0 0 15px rgba(234,179,8,0.3);
-        }
-        100% {
-            box-shadow: 0 0 35px rgba(234,179,8,0.6);
-        }
-    }
+/* ---------------- BIO BOX ---------------- */
+.bio-box {
+    margin: 35px auto;
+    max-width: 850px;
+    padding: 28px;
+    border-radius: 18px;
+    border: 2px solid #d4af37;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(5px);
+    text-align: justify;
+    font-size: 18px;
+    color: #e8e8e8;
+    line-height: 1.85;
+    box-shadow: 0 0 18px rgba(212,175,55,0.3);
+}
 
-    .download-section {
-        text-align: center;
-        margin-bottom: 50px;
-    }
+/* ---------------- SLIDESHOW ---------------- */
+.slideshow-container {
+    width: 350px;
+    height: 350px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 1000px;
+}
 
-    .download-section p {
-        margin: 5px 0;
-        font-size: 16px;
-    }
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    transform: rotateY(90deg) scale(1.2);
+    transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+    box-shadow: 0 0 25px gold;
+}
 
-    .btn-download, .btn-ads {
-        display: inline-block;
-        margin: 10px 5px;
-        padding: 14px 25px;
-        border-radius: 12px;
-        font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-        color: #000;
-        background: linear-gradient(90deg, #00ff7f, #00e66e);
-        box-shadow: 0 0 15px rgba(0,255,127,0.4);
-        transition: 0.2s;
-    }
+.slideshow-container img.active {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+}
 
-    .btn-download:hover, .btn-ads:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 25px rgba(0,255,127,0.6);
-    }
+/* ---------------- DOWNLOAD BUTTON ---------------- */
+.btn-download {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    background: linear-gradient(90deg, #00ff7f, #00e66e);
+    box-shadow: 0 0 18px rgba(0,255,120,0.5);
+    transition: 0.2s;
+}
 
-    footer {
-        padding: 30px 20px;
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.2);
-        font-size: 14px;
-        color: #aaa;
-    }
+.btn-download:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 28px rgba(0,255,120,0.8);
+}
 
+/* ---------------- APP ADS BUTTON ---------------- */
+.btn-ads {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffdf75;
+    background: #1b1b1b;
+    border-radius: 8px;
+    border: 1px solid #c9a44a;
+    text-decoration: none;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    margin-top: 60px;
+    padding: 35px;
+    color: #999;
+    font-size: 14px;
+}
 </style>
-
-<script>
-    // Shuffle photos on load
-    function shufflePhotos() {
-        const container = document.querySelector('.photos');
-        const images = Array.from(container.querySelectorAll('img'));
-        for (let i = images.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            container.appendChild(images[j]);
-        }
-    }
-
-    // Shuffle photos continuously every 3 seconds
-    function autoShuffle() {
-        const container = document.querySelector('.photos');
-        const images = Array.from(container.querySelectorAll('img'));
-        const first = images.shift();
-        container.appendChild(first);
-    }
-
-    window.onload = function() {
-        shufflePhotos();
-        setInterval(autoShuffle, 3000); // shuffle every 3 seconds
-    }
-</script>
-
 </head>
+
 <body>
 
-<header>
-    <div class="title">Gold Coin</div>
-    <div class="bio">
-        Welcome to Gold Coin, the ultimate digital experience for coin enthusiasts.<br>
-        Explore, collect, and engage with our dynamic platform.<br>
-        Mine coins, boost your balance, and enjoy interactive features.<br>
-        Our goal is to make your digital coin journey seamless and fun.<br>
-        Stay updated with the latest versions and enjoy the Gold Coin community.<br>
-        Start your adventure today and be part of the Gold Coin legacy.
-    </div>
-</header>
+<div id="particles"></div>
 
-<section class="photos">
-    <img src="pic1.png" alt="Pic 1">
-    <img src="pic2.png" alt="Pic 2">
-    <img src="pic3.png" alt="Pic 3">
-    <img src="pic4.png" alt="Pic 4">
-    <img src="pic5.png" alt="Pic 5">
-</section>
+<script>
+/* --- CREATE 60 MOVING PARTICLES --- */
+for (let i = 0; i < 60; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    p.style.width = p.style.height = Math.random() * 5 + 3 + "px";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.animationDuration = Math.random() * 5 + 5 + "s";
+    document.getElementById("particles").appendChild(p);
+}
+</script>
 
-<section class="download-section">
-    <p>Direct Download Goldcoin version v4.5.apk</p>
-    <a class="btn-download" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">Download Now</a>
-    <br>
-    <a class="btn-ads" href="https://goldcoinweb3.com/app-ads.txt">View app-ads.txt</a>
-</section>
+<!-- LOGO -->
+<img src="myicon.png" class="logo">
+
+<!-- TITLE -->
+<div class="title">GOLD COIN</div>
+
+<!-- BIO -->
+<div class="bio-box">
+    Gold Coin is the ultimate digital experience for coin enthusiasts.<br><br>
+    Explore, collect, and engage with our platform designed to offer the smoothest mining and earning system.<br><br>
+    Boost your balance, enjoy interactive features, and stay updated with the latest versions.<br><br>
+    Begin your journey today and become part of the Golden Legacy.
+</div>
+
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+    <img src="pic1.png" class="active">
+    <img src="pic2.png">
+    <img src="pic3.png">
+    <img src="pic4.png">
+    <img src="pic5.png">
+</div>
+
+<script>
+/* --- 3D ROTATING SLIDESHOW --- */
+let index = 0;
+const slides = document.querySelectorAll(".slideshow-container img");
+
+function rotateSlide() {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+setInterval(rotateSlide, 3000);
+</script>
+
+<!-- DOWNLOAD SECTION -->
+<p style="margin-top:40px;">Direct Download Goldcoin version v4.5.apk</p>
+
+<a class="btn-download" 
+href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">
+Download Now
+</a>
+
+<br>
+
+<a class="btn-ads" href="https://goldcoinweb3.com/app-ads.txt">View app-ads.txt</a>
 
 <footer>
-    Copyright ©️ goldcoinweb3® Pvt Ltd 2017
+    ©️ Goldcoinweb3® Pvt Ltd 2017 — All Rights Reserved
 </footer>
 
 </body>
