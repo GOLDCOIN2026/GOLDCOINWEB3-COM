@@ -46,7 +46,7 @@
 <!-- After you create a Search Console property, paste the verification code here -->
 <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE"> -->
 
-    
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOLD COIN</title>
@@ -126,13 +126,16 @@ body {
     box-shadow: 0 0 18px rgba(212,175,55,0.3);
 }
 
-/* ---------------- SLIDESHOW ---------------- */
+/* ---------------- SLIDESHOW (CENTERED) ---------------- */
 .slideshow-container {
     width: 350px;
     height: 350px;
-    margin: 50px auto;
+    margin: 40px auto 10px auto; /* centered perfectly */
     position: relative;
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slideshow-container img {
@@ -142,7 +145,7 @@ body {
     position: absolute;
     object-fit: cover;
     opacity: 0;
-    transform: rotateY(90deg) scale(1.2);
+    transform: rotateY(90deg) scale(1.15);
     transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
     box-shadow: 0 0 25px gold;
 }
@@ -164,6 +167,7 @@ body {
     background: linear-gradient(90deg, #00ff7f, #00e66e);
     box-shadow: 0 0 18px rgba(0,255,120,0.5);
     transition: 0.2s;
+    margin-top: 10px;
 }
 
 .btn-download:hover {
@@ -171,18 +175,12 @@ body {
     box-shadow: 0 0 28px rgba(0,255,120,0.8);
 }
 
-/* ---------------- APP ADS BUTTON ---------------- */
-.btn-ads {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 7px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #ffdf75;
-    background: #1b1b1b;
-    border-radius: 8px;
-    border: 1px solid #c9a44a;
-    text-decoration: none;
+/* ---------------- APK INSTRUCTIONS ---------------- */
+.instructions {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.7;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -225,7 +223,7 @@ for (let i = 0; i < 60; i++) {
     Begin your journey today and become part of the Golden Legacy.
 </div>
 
-<!-- SLIDESHOW -->
+<!-- SLIDESHOW (Centered) -->
 <div class="slideshow-container">
     <img src="pic1.png" class="active">
     <img src="pic2.png">
@@ -256,8 +254,18 @@ href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%2
 Download Now
 </a>
 
-<br>
+<!-- APK INSTALLATION INSTRUCTIONS -->
+<div class="instructions">
+<b>How to Install:</b><br>
+1. Tap the download button above.<br>
+2. When download completes, open the APK.<br>
+3. If asked, enable “Install Unknown Apps”.<br>
+4. Press Install and wait 5–10 seconds.<br>
+5. Open Goldcoin and start earning!
+</div>
 
+<!-- APP ADS TXT (Moved Down) -->
+<br><br>
 <a class="btn-ads" href="https://goldcoinweb3.com/app-ads.txt">View app-ads.txt</a>
 
 <footer>
