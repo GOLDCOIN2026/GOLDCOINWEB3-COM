@@ -1,52 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Goldcoin",
-  "url": "https://goldcoinweb3.com",
-  "description": "Goldcoin - Earn free crypto rewards daily by spinning, boosting and referrals.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://goldcoinweb3.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>    
-    
-    <head>
-<!-- Basic SEO -->
-<meta name="description" content="Goldcoin - Earn free crypto rewards daily by spinning, boosting, referrals and more. Trusted Web3 earning app.">
-<meta name="keywords" content="goldcoin, gold coin earn, crypto earning, web3 rewards, spin to earn, faucet, free crypto, earn crypto fast">
-<meta name="author" content="Goldcoin Team">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph (Facebook / WhatsApp / Twitter) -->
-<meta property="og:title" content="Goldcoin - Earn Crypto Fast">
-<meta property="og:description" content="Earn free crypto rewards daily by spinning and boosting. Join Goldcoin now.">
-<meta property="og:image" content="https://goldcoinweb3.com/scr/picture/logo.jpg">
-<meta property="og:url" content="https://goldcoinweb3.com">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Goldcoin - Earn Crypto Fast">
-<meta name="twitter:description" content="Earn crypto daily with Goldcoin spin & boost rewards.">
-<meta name="twitter:image" content="https://goldcoinweb3.com/scr/picture/logo.jpg">
-
-<!-- Mobile + SEO Boost -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://goldcoinweb3.com">
-
-<!-- Google Site Verification (optional) -->
-<!-- After you create a Search Console property, paste the verification code here -->
-<!-- <meta name="google-site-verification" content="YOUR_CODE_HERE"> -->
-
-
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOLD COIN</title>
@@ -86,19 +40,25 @@ body {
     100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
 }
 
-/* ---------------- LOGO ---------------- */
-.logo {
-    width: 120px;
-    margin-top: 30px;
+/* ---------------- ICON / LOGO ---------------- */
+.icon {
+    width: 85px;
+    margin-top: 28px;
     filter: drop-shadow(0 0 10px gold);
+    animation: popIn 1.2s ease-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.4); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 /* ---------------- TITLE ---------------- */
 .title {
     margin-top: 10px;
-    font-size: 62px;
+    font-size: 58px;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     background: linear-gradient(90deg, #ffe08a, #fff3c4, #ffe08a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,16 +86,13 @@ body {
     box-shadow: 0 0 18px rgba(212,175,55,0.3);
 }
 
-/* ---------------- SLIDESHOW (CENTERED) ---------------- */
+/* ---------------- SLIDESHOW ---------------- */
 .slideshow-container {
     width: 350px;
     height: 350px;
-    margin: 40px auto 10px auto; /* centered perfectly */
+    margin: 40px auto;
     position: relative;
     perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .slideshow-container img {
@@ -183,6 +140,20 @@ body {
     line-height: 1.7;
 }
 
+/* ---------------- ADS BUTTON ---------------- */
+.btn-ads {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffdf75;
+    background: #1b1b1b;
+    border-radius: 8px;
+    border: 1px solid #c9a44a;
+    text-decoration: none;
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     margin-top: 60px;
@@ -209,7 +180,7 @@ for (let i = 0; i < 60; i++) {
 }
 </script>
 
-<!-- LOGO -->
+<!-- LOGO (SMALL + CENTERED) -->
 <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="GOLD COIN Logo">
 
 <!-- TITLE -->
@@ -223,7 +194,7 @@ for (let i = 0; i < 60; i++) {
     Begin your journey today and become part of the Golden Legacy.
 </div>
 
-<!-- SLIDESHOW (Centered) -->
+<!-- SLIDESHOW -->
 <div class="slideshow-container">
     <img src="pic1.png" class="active">
     <img src="pic2.png">
@@ -258,14 +229,13 @@ Download Now
 <div class="instructions">
 <b>How to Install:</b><br>
 1. Tap the download button above.<br>
-2. When download completes, open the APK.<br>
-3. If asked, enable “Install Unknown Apps”.<br>
-4. Press Install and wait 5–10 seconds.<br>
+2. When download finishes, open the APK.<br>
+3. If prompted, enable “Install Unknown Apps”.<br>
+4. Press Install → wait 5–10 seconds.<br>
 5. Open Goldcoin and start earning!
 </div>
 
-<!-- APP ADS TXT (Moved Down) -->
-<br><br>
+<!-- APP ADS TXT BUTTON -->
 <a class="btn-ads" href="https://goldcoinweb3.com/app-ads.txt">View app-ads.txt</a>
 
 <footer>
