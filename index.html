@@ -33,21 +33,6 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
 
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "Gold Coin Web3",
-  "operatingSystem": "Android",
-  "applicationCategory": "GameApplication",
-  "downloadUrl": "https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk",
-  "image": "https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4",
-  "description": "Gold Coin Web3 is an earning-based digital coin experience offering smooth mining, rewards and interactive features.",
-  "url": "https://goldcoinweb3.com/"
-}
-</script>
-
 <style>
   :root{
     --gold: #ffd36b;
@@ -55,7 +40,6 @@
     --bg-dark: #000;
   }
 
-  /* ---------- BASE ---------- */
   *{box-sizing:border-box}
   body{
     margin:0;
@@ -223,14 +207,21 @@
   .gc-btn:hover::after{ opacity:1 }
   .gc-btn i{ color:var(--gold); font-size:20px }
 
-  /* ---------- FULL BANNER ---------- */
-  .full-banner{
-    width:100%;
-    max-width:980px;
-    display:block;
+  /* ---------- FULL WIDTH BANNER CAROUSEL (no shuffle) ---------- */
+  .banner-carousel{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
     margin:28px auto;
+    max-width:980px;
+  }
+  .banner-carousel img{
+    width:180px;
+    height:180px;
     border-radius:16px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(255,200,20,0.08);
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
   }
 
   /* ---------- APK CARD (centered) ---------- */
@@ -249,17 +240,21 @@
     box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 35px rgba(255,215,0,0.04);
     text-align:center;
   }
-  .apk-card .icon{
-    width:88px; height:88px; margin-bottom:12px;
+  .apk-card .icon-gold{
+    width:50px; height:50px; /* reduced */
+    vertical-align:middle;
+    margin-right:10px;
   }
-  .apk-card .gold-text{
+  .apk-card .gold-text-inline{
     font-size:26px;
     font-weight:800;
     background:linear-gradient(90deg,var(--gold-strong),#ffd966);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    margin-bottom:6px;
+    display:inline-block;
+    vertical-align:middle;
   }
+
   .apk-card .version{
     color:#ffd87a;
     font-weight:700;
@@ -291,115 +286,114 @@
     font-size:13px;
   }
 
-  /* ---------- FOOTER ---------- */
   footer{
     color:#aaa;
     padding:36px 18px;
     font-size:14px;
   }
 
-  /* ---------- RESPONSIVE ---------- */
   @media (max-width:520px){
     .site-title{ font-size:30px }
     .slideshow{ width:86vw; height:86vw }
     .bio-box{ padding:16px; margin:18px 12px }
     .gc-btn{ font-size:16px; padding:12px }
     .apk-card{ padding:18px }
+    .banner-carousel img{ width:40vw; height:40vw }
   }
-
 </style>
 </head>
 
 <body>
 
-  <!-- PARTICLES -->
-  <div id="particles"></div>
-  <script>
-    // create floating particles
-    for (let i=0;i<70;i++){
-      const el = document.createElement('div');
-      el.className = 'particle';
-      const size = Math.random()*6+2;
-      el.style.width = el.style.height = size+'px';
-      el.style.left = Math.random()*100 + 'vw';
-      el.style.top = Math.random()*100 + 'vh';
-      el.style.animationDuration = (Math.random()*6 + 6) + 's';
-      el.style.opacity = (Math.random()*0.6 + 0.25);
-      document.getElementById('particles').appendChild(el);
-    }
-  </script>
-  
-  <!-- ICON + TITLE -->
-  <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="GOLD COIN Logo">
-  <div class="site-title">GOLD COIN</div>
-  <div class="subtitle">Official website of Goldcoin Digital Virtual Currency — play, mine, collect and earn rewards across a fun Web3 experience.</div>
+<!-- PARTICLES -->
+<div id="particles"></div>
+<script>
+for (let i=0;i<70;i++){
+  const el = document.createElement('div');
+  el.className = 'particle';
+  const size = Math.random()*6+2;
+  el.style.width = el.style.height = size+'px';
+  el.style.left = Math.random()*100 + 'vw';
+  el.style.top = Math.random()*100 + 'vh';
+  el.style.animationDuration = (Math.random()*6 + 6) + 's';
+  el.style.opacity = (Math.random()*0.6 + 0.25);
+  document.getElementById('particles').appendChild(el);
+}
+</script>
 
-  <!-- SLIDESHOW (centered) -->
-  <div class="slideshow-wrapper">
-    <div class="slideshow">
-      <img src="pic1.png" class="active" alt="pic1">
-      <img src="pic2.png" alt="pic2">
-      <img src="pic3.png" alt="pic3">
-      <img src="pic4.png" alt="pic4">
-      <img src="pic5.png" alt="pic5">
+<!-- ICON + TITLE -->
+<img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="GOLD COIN Logo">
+<div class="site-title">GOLD COIN</div>
+<div class="subtitle">Official website of Goldcoin Digital Virtual Currency — play, mine, collect and earn rewards across a fun Web3 experience.</div>
+
+<!-- SLIDESHOW (centered) -->
+<div class="slideshow-wrapper">
+  <div class="slideshow">
+    <img src="pic1.png" class="active" alt="pic1">
+    <img src="pic2.png" alt="pic2">
+    <img src="pic3.png" alt="pic3">
+    <img src="pic4.png" alt="pic4">
+    <img src="pic5.png" alt="pic5">
+  </div>
+</div>
+
+<!-- BIO BOX -->
+<div class="bio-box">
+  Gold Coin Web3 is a Mining ⛏️ based digital coin platform offering mining, rewarded tasks, and interactive features.
+  Boost your balance, enjoy fun mechanics, and stay updated with new versions. Join the Gold Coin community and start earning today.
+</div>
+
+<!-- GOLD BUTTONS -->
+<div class="gc-section">
+  <div class="gc-title">Learn More About Goldcoin</div>
+
+  <a class="gc-btn" href="/whitepaper.html"><i class="fa-solid fa-book"></i> White Paper</a>
+  <a class="gc-btn" href="/privacypolicy.html"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+  <a class="gc-btn" href="/termsofuse.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a>
+  <a class="gc-btn" href="/securityguide.html"><i class="fa-solid fa-lock"></i> Security Guide</a>
+  <a class="gc-btn" href="/about.html"><i class="fa-solid fa-circle-info"></i> About Goldcoin</a>
+</div>
+
+<!-- BANNER CAROUSEL ABOVE DOWNLOAD -->
+<div class="banner-carousel">
+  <img src="download.png" alt="picture1">
+  <img src="download1.png" alt="picture2">
+</div>
+
+<!-- APK DOWNLOAD CARD (centered) -->
+<div class="apk-card-wrap">
+  <div class="apk-card" role="region" aria-label="Download Goldcoin APK">
+    <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon-gold" alt="GOLD COIN Logo">
+    <span class="gold-text-inline">GOLD COIN</span>
+    <div style="margin-top:6px; font-size:16px;">Download GOLDCOIN APK</div>
+    <div class="version">Goldcoin version v4.5</div>
+
+    <a class="apk-btn" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk" rel="noopener" target="_blank">
+      ⬇ Download Now (v4.5)
+    </a>
+
+    <div class="warning-box">
+      <div style="color:#ffcc66; font-weight:700;">⚠ Before Installing the APK</div>
+      <p style="margin:8px 0 0;">To install this app, enable <b>Settings → Security → Install Unknown Apps</b> for your browser. Then open the downloaded file to install normally.</p>
     </div>
   </div>
+</div>
 
-  <!-- BIO BOX -->
-  <div class="bio-box">
-    Gold Coin Web3 is a Mining ⛏️ based digital coin platform offering mining, rewarded tasks, and interactive features.
-    Boost your balance, enjoy fun mechanics, and stay updated with new versions. Join the Gold Coin community and start earning today.
-  </div>
+<footer>
+  ©️ Goldcoinweb3® Pvt Ltd 2017 — All Rights Reserved
+</footer>
 
-  <!-- GOLD BUTTONS -->
-  <div class="gc-section">
-    <div class="gc-title">Learn More About Goldcoin</div>
-
-    <a class="gc-btn" href="/whitepaper.html"><i class="fa-solid fa-book"></i> White Paper</a>
-    <a class="gc-btn" href="/privacypolicy.html"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
-    <a class="gc-btn" href="/termsofuse.html"><i class="fa-solid fa-file-contract"></i> Terms of Use</a>
-    <a class="gc-btn" href="/securityguide.html"><i class="fa-solid fa-lock"></i> Security Guide</a>
-    <a class="gc-btn" href="/about.html"><i class="fa-solid fa-circle-info"></i> About Goldcoin</a>
-  </div>
-
-  <!-- FULL WIDTH BANNER -->
-  <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/download.png?alt=media&token=847f2696-2432-4e76-8a3a-9d5b82c329ae" class="full-banner" alt="Goldcoin Banner">
-
-  <!-- APK DOWNLOAD CARD (centered) -->
-  <div class="apk-card-wrap">
-    <div class="apk-card" role="region" aria-label="Download Goldcoin APK">
-      <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="GOLD COIN Logo">
-      <div class="gold-text">GOLD COIN</div>
-      <div style="margin-top:6px; font-size:16px;">Download GOLDCOIN APK</div>
-      <div class="version">Goldcoin version v4.5</div>
-
-      <a class="apk-btn" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk" rel="noopener" target="_blank">
-        ⬇ Download Now (v4.5)
-      </a>
-
-      <div class="warning-box">
-        <div style="color:#ffcc66; font-weight:700;">⚠ Before Installing the APK</div>
-        <p style="margin:8px 0 0;">To install this app, enable <b>Settings → Security → Install Unknown Apps</b> for your browser. Then open the downloaded file to install normally.</p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    ©️ Goldcoinweb3® Pvt Ltd 2017 — All Rights Reserved
-  </footer>
-
-  <!-- SLIDESHOW SCRIPT -->
-  <script>
-    (function(){
-      const slides = document.querySelectorAll('.slideshow img');
-      let i = 0;
-      if(!slides.length) return;
-      setInterval(()=> {
-        slides[i].classList.remove('active');
-        i = (i+1) % slides.length;
-        slides[i].classList.add('active');
-      }, 3000);
-    })();
-  </script>
+<script>
+(function(){
+  const slides = document.querySelectorAll('.slideshow img');
+  let i = 0;
+  if(!slides.length) return;
+  setInterval(()=> {
+    slides[i].classList.remove('active');
+    i = (i+1) % slides.length;
+    slides[i].classList.add('active');
+  }, 3000);
+})();
+</script>
 </body>
 </html>
