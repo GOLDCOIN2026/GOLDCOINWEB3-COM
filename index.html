@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gold Coin - Official Website | Earn, Collect & Play</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- ======================= SEO ESSENTIALS ======================= -->
 <meta name="description" content="Gold Coin Web3 is the official platform to download Goldcoin APK, collect coins, earn rewards, and explore advanced mining-based gaming features.">
 <meta name="keywords" content="Gold Coin, Goldcoin APK, Goldcoinweb3, Earn Coins, Mining Game, Coin App, Web3 Coin Game, Goldcoin Download">
@@ -150,6 +150,136 @@ body {
     box-shadow: 0 0 18px rgba(212,175,55,0.3);
 }
 
+<style>
+/* ---------- SECTION STYLING ---------- */
+.gc-section {
+    margin-top: 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Heading text */
+.gc-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Button container */
+.gc-btn-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.gc-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.08);
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing border animation */
+.gc-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(120deg, #ffd700, #ff8c00, #ff006a, #ffd700);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 0;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+/* Hover animation */
+.gc-btn:hover::before {
+    opacity: 1;
+}
+
+.gc-btn:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.18);
+}
+
+/* Icon */
+.gc-btn i {
+    font-size: 20px;
+}
+
+/* Full width image */
+.gc-full-img {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.35);
+}
+</style>
+
+<!-- ---------- SECTION HTML ---------- -->
+<div class="gc-section">
+
+    <div class="gc-title">Learn More About Goldcoin</div>
+
+    <!-- WHITEPAPER -->
+    <div class="gc-btn-box">
+        <a class="gc-btn" href="/whitepaper.tsx">
+            <i class="fa-solid fa-scroll"></i>
+            White Paper
+        </a>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <div class="gc-btn-box">
+        <a class="gc-btn" href="/privacypolicy.tsx">
+            <i class="fa-solid fa-shield-halved"></i>
+            Privacy Policy
+        </a>
+    </div>
+
+    <!-- TERMS OF USE -->
+    <div class="gc-btn-box">
+        <a class="gc-btn" href="/termsofuse.tsx">
+            <i class="fa-solid fa-scale-balanced"></i>
+            Terms of Use
+        </a>
+    </div>
+
+    <!-- SECURITY GUIDE -->
+    <div class="gc-btn-box">
+        <a class="gc-btn" href="/securityguide.tsx">
+            <i class="fa-solid fa-user-shield"></i>
+            Security Guide
+        </a>
+    </div>
+
+    <!-- ABOUT GOLDCOIN -->
+    <div class="gc-btn-box">
+        <a class="gc-btn" href="/about.tsx">
+            <i class="fa-solid fa-coins"></i>
+            About Goldcoin
+        </a>
+    </div>
+
+    <!-- FULL WIDTH IMAGE -->
+    <img class="gc-full-img" src="download.png" alt="Download Goldcoin">
+
+</div>
+  
 /* ---------------- DOWNLOAD BUTTON ---------------- */
 .btn-download {
     display: inline-block;
