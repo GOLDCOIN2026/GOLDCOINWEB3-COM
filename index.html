@@ -6,266 +6,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gold Coin - Official Website | Earn, Collect & Play</title>
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- ======================= SEO ESSENTIALS ======================= -->
-<meta name="description" content="Gold Coin Web3 is the official platform to download Goldcoin APK, collect coins, earn rewards, and explore advanced mining-based gaming features.">
-<meta name="keywords" content="Gold Coin, Goldcoin APK, Goldcoinweb3, Earn Coins, Mining Game, Coin App, Web3 Coin Game, Goldcoin Download">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://goldcoinweb3.com/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Gold Coin - Earn Coins & Download APK">
-<meta property="og:description" content="Download Goldcoin APK v4.5 and explore the newest features of the Gold Coin Web3 ecosystem.">
-<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
-<meta property="og:url" content="https://goldcoinweb3.com/">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gold Coin - Earn & Download APK">
-<meta name="twitter:description" content="Experience the official Goldcoin earning & mining system. Download APK now.">
-<meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
-
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "Gold Coin Web3",
-  "operatingSystem": "Android",
-  "applicationCategory": "GameApplication",
-  "downloadUrl": "https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk",
-  "image": "https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4",
-  "description": "Gold Coin Web3 is an earning-based digital coin experience offering smooth mining, rewards and interactive features.",
-  "url": "https://goldcoinweb3.com/"
-}
-</script>
-  
 <style>
-body {
-    margin: 0;
-    font-family: "Poppins", Arial, sans-serif;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    overflow-x: hidden;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        text-align: center;
+    }
 
-/* ================= PARTICLES ================= */
-#particles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #1a1a1a, #000);
-    z-index: -1;
-    overflow: hidden;
-}
-.particle {
-    position: absolute;
-    background: rgba(255, 215, 0, 0.7);
-    border-radius: 50%;
-    box-shadow: 0 0 10px gold;
-    animation: floatUp 8s linear infinite;
-    filter: blur(1px);
-}
-@keyframes floatUp {
-    0% { transform: translateY(100vh) scale(0.4); opacity: 0.3; }
-    100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
-}
+    /* ================= HERO IMAGE ================= */
+    .hero-img {
+        width: 100%;
+        max-width: 450px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+    }
 
-/* ================= ICON ================= */
-.icon {
-    width: 70px;
-    margin-top: 25px;
-    filter: drop-shadow(0 0 10px gold);
-    animation: popIn 1.2s ease-out;
-}
-@keyframes popIn {
-    0% { transform: scale(0.4); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
+    /* ================= BUTTONS ================= */
+    .glow-btn {
+        width: 90%;
+        margin: 12px auto;
+        padding: 15px;
+        background: rgba(20, 20, 20, 0.9);
+        border: 2px solid gold;
+        border-radius: 12px;
+        color: gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        gap: 10px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+        transition: 0.2s;
+    }
 
-/* ================= TITLE ================= */
-.title {
-    margin-top: 10px;
-    font-size: 58px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-    background: linear-gradient(90deg, #ffe08a, #fff3c4, #ffe08a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glowTitle 2s infinite alternate;
-}
-@keyframes glowTitle {
-    0% { text-shadow: 0 0 10px #ffcf40; }
-    100% { text-shadow: 0 0 25px #ffdd55; }
-}
+    .glow-btn:hover {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+        transform: scale(1.03);
+    }
 
-/* ================= BIO BOX ================= */
-.bio-box {
-    margin: 35px auto;
-    max-width: 850px;
-    padding: 28px;
-    border-radius: 18px;
-    border: 2px solid #d4af37;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(5px);
-    text-align: justify;
-    font-size: 18px;
-    color: #e8e8e8;
-    line-height: 1.85;
-    box-shadow: 0 0 18px rgba(212,175,55,0.3);
-}
+    /* ================= DOWNLOAD IMAGE ================= */
+    .download-img {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 25px auto;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    }
 
-/* ================= SLIDESHOW ================= */
-.slideshow-container {
-    width: 350px;
-    height: 350px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    perspective: 1000px;
-}
-.slideshow-container img {
-    width: 350px;
-    height: 350px;
-    border-radius: 30px;
-    position: absolute;
-    object-fit: cover;
-    opacity: 0;
-    transform: rotateY(90deg) scale(1.15);
-    transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
-    box-shadow: 0 0 25px gold;
-}
-.slideshow-container img.active {
-    opacity: 1;
-    transform: rotateY(0deg) scale(1);
-}
+    /* ================= DOWNLOAD BUTTON (BIG) ================= */
+    .download-big {
+        display: inline-block;
+        padding: 16px 25px;
+        background: linear-gradient(90deg, #00ff7f, #00cc66);
+        border-radius: 12px;
+        color: #000;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        box-shadow: 0 0 18px rgba(0,255,140,0.55);
+        margin: 20px auto;
+        transition: 0.2s;
+    }
 
-/* ================= GOLD BUTTON SECTION ================= */
-.gc-section {
-    margin-top: 45px;
-    padding: 0 20px;
-}
-
-.gc-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #ffda7a;
-    text-shadow: 0 0 10px gold;
-}
-
-.gc-btn {
-    width: 100%;
-    max-width: 700px;
-    margin: 12px auto;
-    padding: 16px 20px;
-    border-radius: 14px;
-    background: rgba(30, 30, 30, 0.65);
-    border: 2px solid gold;
-    color: gold;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-    transition: 0.25s;
-}
-.gc-btn:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px gold;
-}
-.gc-btn i {
-    color: gold;
-    font-size: 22px;
-}
-
-/* ================= DOWNLOAD BANNER IMAGE ================= */
-.full-banner {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0 0 25px gold;
-}
+    .download-big:hover {
+        box-shadow: 0 0 35px rgba(0,255,160,0.85);
+        transform: scale(1.05);
+    }
 
 </style>
-</head>
 
+</head>
 <body>
 
-<div id="particles"></div>
+<h1 style="margin-top:25px; font-size:35px; background:linear-gradient(90deg,gold,#ffdd55); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    GOLD COIN WEB3
+</h1>
 
-<script>
-for (let i = 0; i < 60; i++) {
-    const p = document.createElement("div");
-    p.classList.add("particle");
-    p.style.width = p.style.height = Math.random() * 5 + 3 + "px";
-    p.style.left = Math.random() * 100 + "vw";
-    p.style.animationDuration = Math.random() * 5 + 5 + "s";
-    document.getElementById("particles").appendChild(p);
-}
-</script>
+<p style="opacity:0.8; max-width:420px; margin:auto;">
+    Official website of Goldcoin Web3 – Play, earn and explore the next generation coin mining system.
+</p>
 
-<!-- ICON -->
-<img src="myicon3.png" class="icon">
+<!-- ================= HERO IMAGE ================= -->
+<img src="download.png" class="hero-img" alt="Goldcoin">
 
-<!-- MAIN TITLE -->
-<div class="title">GOLD COIN</div>
+<!-- ================= BUTTON SECTION ================= -->
+<h2 style="margin-top:35px; font-size:26px;">Learn More About Goldcoin</h2>
 
-<!-- BIO -->
-<div class="bio-box">
-    Gold Coin is the ultimate digital experience for coin enthusiasts...
-</div>
+<a class="glow-btn" href="/whitepaper.tsx">
+    <i class="fa-solid fa-file"></i> White Paper
+</a>
 
-<!-- SLIDESHOW -->
-<div class="slideshow-container">
-    <img src="pic1.png" class="active">
-    <img src="pic2.png">
-    <img src="pic3.png">
-    <img src="pic4.png">
-    <img src="pic5.png">
-</div>
+<a class="glow-btn" href="/privacypolicy.tsx">
+    <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+</a>
 
-<script>
-let index = 0;
-const slides = document.querySelectorAll(".slideshow-container img");
+<a class="glow-btn" href="/termsofuse.tsx">
+    <i class="fa-solid fa-scale-balanced"></i> Terms of Use
+</a>
 
-function rotateSlide() {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-}
-setInterval(rotateSlide, 3000);
-</script>
+<a class="glow-btn" href="/securityguide.tsx">
+    <i class="fa-solid fa-lock"></i> Security Guide
+</a>
 
-<!-- ================ GOLD BUTTON SECTION ================ -->
-<div class="gc-section">
-    <div class="gc-title">Learn More About Goldcoin</div>
+<a class="glow-btn" href="/about.tsx">
+    <i class="fa-solid fa-circle-info"></i> About Goldcoin
+</a>
 
-    <a class="gc-btn" href="/whitepaper.tsx"><i class="fa-solid fa-book"></i>White Paper</a>
-    <a class="gc-btn" href="/privacypolicy.tsx"><i class="fa-solid fa-shield-halved"></i>Privacy Policy</a>
-    <a class="gc-btn" href="/termsofuse.tsx"><i class="fa-solid fa-file-contract"></i>Terms of Use</a>
-    <a class="gc-btn" href="/securityguide.tsx"><i class="fa-solid fa-lock"></i>Security Guide</a>
-    <a class="gc-btn" href="/about.tsx"><i class="fa-solid fa-circle-info"></i>About Goldcoin</a>
-</div>
+<!-- ================= DOWNLOAD IMAGE ================= -->
+<img src="download.png" class="download-img" alt="Download Goldcoin App">
 
-<!-- FULL WIDTH BANNER IMAGE -->
-<img src="download.png" class="full-banner" alt="Download">
+<!-- ================= BIG DOWNLOAD BUTTON ================= -->
+<a class="download-big"
+   href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">
+    ⬇ Download Goldcoin APK v4.5
+</a>
+
+<br><br><br>
 
 </body>
 </html>
