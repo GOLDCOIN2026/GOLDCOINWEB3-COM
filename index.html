@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gold Coin - Official Website | Earn, Collect & Play</title>
 
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- ======================= SEO ESSENTIALS ======================= -->
@@ -48,8 +47,7 @@
   "url": "https://goldcoinweb3.com/"
 }
 </script>
-
-<!-- ======================= PAGE DESIGN CSS ======================= -->
+  
 <style>
 body {
     margin: 0;
@@ -60,13 +58,14 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------------- PARTICLES ---------------- */
+/* ================= PARTICLES ================= */
 #particles {
     position: fixed;
     width: 100%;
     height: 100%;
     background: radial-gradient(circle, #1a1a1a, #000);
     z-index: -1;
+    overflow: hidden;
 }
 .particle {
     position: absolute;
@@ -81,7 +80,7 @@ body {
     100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
 }
 
-/* ---------------- ICON SMALL ---------------- */
+/* ================= ICON ================= */
 .icon {
     width: 70px;
     margin-top: 25px;
@@ -93,11 +92,12 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* ---------------- TITLE ---------------- */
+/* ================= TITLE ================= */
 .title {
     margin-top: 10px;
     font-size: 58px;
     font-weight: 800;
+    letter-spacing: 2.5px;
     background: linear-gradient(90deg, #ffe08a, #fff3c4, #ffe08a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -108,29 +108,7 @@ body {
     100% { text-shadow: 0 0 25px #ffdd55; }
 }
 
-/* ---------------- SLIDESHOW ---------------- */
-.slideshow-container {
-    width: 350px;
-    height: 350px;
-    margin: 40px auto;
-    perspective: 1000px;
-}
-.slideshow-container img {
-    width: 350px;
-    height: 350px;
-    border-radius: 30px;
-    position: absolute;
-    opacity: 0;
-    transform: rotateY(90deg) scale(1.15);
-    transition: opacity 1.3s, transform 1.3s;
-    box-shadow: 0 0 25px gold;
-}
-.slideshow-container img.active {
-    opacity: 1;
-    transform: rotateY(0deg) scale(1);
-}
-
-/* ---------------- BIO ---------------- */
+/* ================= BIO BOX ================= */
 .bio-box {
     margin: 35px auto;
     max-width: 850px;
@@ -139,82 +117,92 @@ body {
     border: 2px solid #d4af37;
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(5px);
+    text-align: justify;
     font-size: 18px;
     color: #e8e8e8;
     line-height: 1.85;
-    text-align: justify;
     box-shadow: 0 0 18px rgba(212,175,55,0.3);
 }
 
-/* ---------- SECTION STYLING ---------- */
-.gc-section {
-    margin-top: 40px;
-    padding: 0 20px;
-    text-align: center;
+/* ================= SLIDESHOW ================= */
+.slideshow-container {
+    width: 350px;
+    height: 350px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+}
+.slideshow-container img {
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    transform: rotateY(90deg) scale(1.15);
+    transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+    box-shadow: 0 0 25px gold;
+}
+.slideshow-container img.active {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
 }
 
-/* Heading */
+/* ================= GOLD BUTTON SECTION ================= */
+.gc-section {
+    margin-top: 45px;
+    padding: 0 20px;
+}
+
 .gc-title {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 25px;
+    color: #ffda7a;
+    text-shadow: 0 0 10px gold;
 }
 
-/* Buttons */
-.gc-btn-box {
-    width: 100%;
-    margin-bottom: 20px;
-}
 .gc-btn {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: rgba(255,255,255,0.08);
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 18px;
-    color: #fff;
+    max-width: 700px;
+    margin: 12px auto;
+    padding: 16px 20px;
+    border-radius: 14px;
+    background: rgba(30, 30, 30, 0.65);
+    border: 2px solid gold;
+    color: gold;
+    font-size: 20px;
+    font-weight: 600;
     text-decoration: none;
-    border: 2px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Glow Border */
-.gc-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    padding: 2px;
-    background: linear-gradient(120deg, #ffd700, #ff8c00, #ff006a, #ffd700);
-    opacity: 0;
-    transition: 0.4s;
-}
-.gc-btn:hover::before {
-    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+    transition: 0.25s;
 }
 .gc-btn:hover {
-    transform: scale(1.02);
-    background: rgba(255,255,255,0.18);
+    transform: scale(1.03);
+    box-shadow: 0 0 25px gold;
 }
-
-/* Icon */
 .gc-btn i {
-    font-size: 20px;
+    color: gold;
+    font-size: 22px;
 }
 
-/* Full Width Image */
-.gc-full-img {
+/* ================= DOWNLOAD BANNER IMAGE ================= */
+.full-banner {
     width: 100%;
-    margin-top: 30px;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(255,215,0,0.35);
+    max-width: 900px;
+    margin: 40px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 25px gold;
 }
+
 </style>
 </head>
 
@@ -222,72 +210,62 @@ body {
 
 <div id="particles"></div>
 
-<!-- APP ICON -->
-<img class="icon" src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media" />
+<script>
+for (let i = 0; i < 60; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    p.style.width = p.style.height = Math.random() * 5 + 3 + "px";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.animationDuration = Math.random() * 5 + 5 + "s";
+    document.getElementById("particles").appendChild(p);
+}
+</script>
 
-<!-- TITLE -->
-<div class="title">GOLD COIN WEB3</div>
+<!-- ICON -->
+<img src="myicon3.png" class="icon">
 
-<!-- SLIDESHOW -->
-<div class="slideshow-container">
-    <img src="scr/picture/pic1.png" class="active">
-    <img src="scr/picture/pic2.png">
-    <img src="scr/picture/pic3.png">
-</div>
+<!-- MAIN TITLE -->
+<div class="title">GOLD COIN</div>
 
 <!-- BIO -->
 <div class="bio-box">
-Gold Coin Web3 is an earning-based digital coin platform offering mining, rewarded tasks,
-and Web3 interactive features. Join thousands of users collecting & earning daily rewards.
+    Gold Coin is the ultimate digital experience for coin enthusiasts...
 </div>
 
-<!-- ========== SECTION WITH BUTTONS + IMAGE ========== -->
-<div class="gc-section">
-    <div class="gc-title">Learn More About Goldcoin</div>
-
-    <div class="gc-btn-box">
-        <a class="gc-btn" href="/whitepaper.tsx">
-            <i class="fa-solid fa-scroll"></i> White Paper
-        </a>
-    </div>
-
-    <div class="gc-btn-box">
-        <a class="gc-btn" href="/privacypolicy.tsx">
-            <i class="fa-solid fa-shield-halved"></i> Privacy Policy
-        </a>
-    </div>
-
-    <div class="gc-btn-box">
-        <a class="gc-btn" href="/termsofuse.tsx">
-            <i class="fa-solid fa-scale-balanced"></i> Terms of Use
-        </a>
-    </div>
-
-    <div class="gc-btn-box">
-        <a class="gc-btn" href="/securityguide.tsx">
-            <i class="fa-solid fa-user-shield"></i> Security Guide
-        </a>
-    </div>
-
-    <div class="gc-btn-box">
-        <a class="gc-btn" href="/about.tsx">
-            <i class="fa-solid fa-coins"></i> About Goldcoin
-        </a>
-    </div>
-
-    <img src="download.png" class="gc-full-img" alt="Goldcoin Download">
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+    <img src="pic1.png" class="active">
+    <img src="pic2.png">
+    <img src="pic3.png">
+    <img src="pic4.png">
+    <img src="pic5.png">
 </div>
 
-<!-- SLIDESHOW SCRIPT -->
 <script>
-let slides = document.querySelectorAll(".slideshow-container img");
 let index = 0;
-setInterval(() => {
+const slides = document.querySelectorAll(".slideshow-container img");
+
+function rotateSlide() {
     slides[index].classList.remove("active");
     index = (index + 1) % slides.length;
     slides[index].classList.add("active");
-}, 2500);
+}
+setInterval(rotateSlide, 3000);
 </script>
+
+<!-- ================ GOLD BUTTON SECTION ================ -->
+<div class="gc-section">
+    <div class="gc-title">Learn More About Goldcoin</div>
+
+    <a class="gc-btn" href="/whitepaper.tsx"><i class="fa-solid fa-book"></i>White Paper</a>
+    <a class="gc-btn" href="/privacypolicy.tsx"><i class="fa-solid fa-shield-halved"></i>Privacy Policy</a>
+    <a class="gc-btn" href="/termsofuse.tsx"><i class="fa-solid fa-file-contract"></i>Terms of Use</a>
+    <a class="gc-btn" href="/securityguide.tsx"><i class="fa-solid fa-lock"></i>Security Guide</a>
+    <a class="gc-btn" href="/about.tsx"><i class="fa-solid fa-circle-info"></i>About Goldcoin</a>
+</div>
+
+<!-- FULL WIDTH BANNER IMAGE -->
+<img src="download.png" class="full-banner" alt="Download">
 
 </body>
 </html>
