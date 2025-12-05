@@ -14,333 +14,171 @@
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
 
-<!-- Canonical -->
 <link rel="canonical" href="https://goldcoinweb3.com/">
 
-<!-- Open Graph -->
 <meta property="og:title" content="Gold Coin - Earn Coins & Download APK">
 <meta property="og:description" content="Download Goldcoin APK v4.5 and explore the newest features of the Gold Coin Web3 ecosystem.">
 <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
 <meta property="og:url" content="https://goldcoinweb3.com/">
 <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gold Coin - Earn & Download APK">
 <meta name="twitter:description" content="Experience the official Goldcoin earning & mining system. Download APK now.">
 <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
 
 <style>
-  :root{
-    --gold: #ffd36b;
-    --gold-strong: #ffcc33;
-    --bg-dark: #000;
-  }
+:root{
+  --gold:#ffd36b;
+  --gold-strong:#ffcc33;
+  --bg-dark:#000;
+}
 
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:"Poppins", Arial, sans-serif;
-    background:var(--bg-dark);
-    color:#fff;
-    text-align:center;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
-  a{color:inherit}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:#000;
+  color:#fff;
+  text-align:center;
+}
 
-  /* ---------- PARTICLES ---------- */
-  #particles{
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    background: radial-gradient(circle, #121212 0%, #000 60%);
-    overflow:hidden;
-  }
-  .particle{
-    position:absolute;
-    background: rgba(255,215,0,0.75);
-    width:6px; height:6px;
-    border-radius:50%;
-    filter:blur(1px);
-    box-shadow:0 0 8px rgba(255,215,0,0.4);
-    animation: floatUp linear infinite;
-    opacity:.9;
-  }
-  @keyframes floatUp{
-    0%{ transform: translateY(100vh) scale(.6); opacity: .25 }
-    100%{ transform: translateY(-10vh) scale(1.2); opacity: 0 }
-  }
+/* HEADER FIX — LOGO + TEXT */
+.header-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-top:20px;
+}
 
-  /* ---------- HEADER / HERO ---------- */
-  .site-title{
-    margin:28px 0 6px;
-    font-size:40px;
-    font-weight:800;
-    letter-spacing:1px;
-    background: linear-gradient(90deg,var(--gold-strong),#fff3c4);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    text-shadow:0 0 14px rgba(255,205,80,0.12);
-  }
-  .subtitle{
-    opacity:.86;
-    max-width:760px;
-    margin:0 auto 18px;
-    padding:0 18px;
-    font-size:15px;
-    color:#ddd;
-  }
+.header-logo{
+  width:60px;
+  height:60px;
+  border-radius:12px;
+  object-fit:cover;
+  filter:drop-shadow(0 0 6px rgba(255,200,50,0.8));
+}
 
-  /* ---------- ICON ---------- */
-  .app-icon{
-    width:72px;
-    height:72px;
-    object-fit:contain;
-    margin:14px auto 6px;
-    filter: drop-shadow(0 0 10px rgba(255,205,60,0.8));
-    border-radius:14px;
-  }
+.site-title{
+  font-size:40px;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--gold-strong),#fff3c4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-  /* ---------- BIO BOX ---------- */
-  .bio-box{
-    max-width:920px;
-    margin:22px auto;
-    padding:22px;
-    border-radius:14px;
-    border:2px solid rgba(212,175,55,0.22);
-    background: rgba(0,0,0,0.5);
-    box-shadow:0 0 20px rgba(212,175,55,0.06);
-    text-align:justify;
-    color:#e8e8e8;
-    line-height:1.7;
-    font-size:16px;
-  }
+.subtitle{
+  width:90%;
+  margin:auto;
+  margin-bottom:20px;
+  color:#ddd;
+}
 
-  /* ---------- SLIDESHOW (centered) ---------- */
-  .slideshow-wrapper{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:20px 0;
-  }
-  .slideshow {
-    width:360px;
-    height:360px;
-    max-width:86vw;
-    max-height:86vw;
-    position:relative;
-    perspective:1000px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-  .slideshow img{
-    position:absolute;
-    width:100%;
-    height:100%;
-    border-radius:24px;
-    object-fit:cover;
-    opacity:0;
-    transform: rotateY(90deg) scale(1.12);
-    transition: transform 1.1s cubic-bezier(.2,.9,.2,1), opacity .9s ease;
-    box-shadow:0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,200,30,0.08);
-    border: 1px solid rgba(255,215,0,0.05);
-  }
-  .slideshow img.active{
-    opacity:1;
-    transform: rotateY(0deg) scale(1);
-  }
+/* GOLD BUTTONS */
+.gc-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:760px;
+  padding:14px;
+  margin:10px auto;
+  background:rgba(0,0,0,0.7);
+  color:var(--gold);
+  border:1px solid rgba(255,215,0,0.25);
+  border-radius:12px;
+  font-weight:700;
+  font-size:18px;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 0 15px rgba(255,200,50,0.2);
+}
 
-  /* ---------- GOLD BUTTONS (full width look) ---------- */
-  .gc-section{
-    margin:28px auto 12px;
-    padding:0 18px;
-    max-width:920px;
-  }
-  .gc-title{
-    font-size:22px;
-    color:var(--gold);
-    margin-bottom:14px;
-    font-weight:700;
-    text-shadow:0 0 12px rgba(255,205,80,0.15);
-  }
-  .gc-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    width:100%;
-    max-width:760px;
-    margin:10px auto;
-    padding:14px 18px;
-    border-radius:12px;
-    background: linear-gradient(180deg, rgba(30,30,30,0.86), rgba(18,18,18,0.86));
-    border: 1px solid rgba(255,215,0,0.16);
-    color:var(--gold);
-    font-weight:700;
-    font-size:17px;
-    text-decoration:none;
-    box-shadow: 0 0 12px rgba(255,215,0,0.18);
-    position:relative;
-    overflow:hidden;
-    transition: all .22s ease;
-  }
-  .gc-btn::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:12px;
-    padding:2px;
-    background: linear-gradient(90deg, rgba(255,220,120,0.12), rgba(255,200,50,0.18));
-    opacity:0;
-    transition:opacity .3s;
-    pointer-events:none;
-  }
-  .gc-btn:hover{
-    transform:translateY(-3px) scale(1.01);
-    box-shadow: 0 6px 30px rgba(255,200,40,0.22), inset 0 0 30px rgba(255,240,200,0.02);
-  }
-  .gc-btn:hover::after{ opacity:1 }
-  .gc-btn i{ color:var(--gold); font-size:20px }
+.gc-btn:hover{
+  transform:scale(1.02);
+  box-shadow:0 0 30px rgba(255,200,50,0.35);
+}
 
-  /* ---------- FULL WIDTH BANNER CAROUSEL (no shuffle) ---------- */
-  .banner-carousel{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-    margin:28px auto;
-    max-width:980px;
-  }
-  .banner-carousel img{
-    width:180px;
-    height:180px;
-    border-radius:16px;
-    object-fit:cover;
-    box-shadow:0 10px 30px rgba(0,0,0,0.6);
-  }
+/* IMAGE SECTION FIX */
+.full-img-wrap{
+  margin:30px auto;
+  text-align:center;
+}
 
-  /* ---------- APK CARD (centered) ---------- */
-  .apk-card-wrap{
-    display:flex;
-    justify-content:center;
-    padding:30px 18px 60px;
-  }
-  .apk-card{
-    width:100%;
-    max-width:480px;
-    background: rgba(255,255,255,0.03);
-    border-radius:16px;
-    padding:26px;
-    border:1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 35px rgba(255,215,0,0.04);
-    text-align:center;
-  }
-  .apk-card .icon-gold{
-    width:50px; height:50px; /* reduced */
-    vertical-align:middle;
-    margin-right:10px;
-  }
-  .apk-card .gold-text-inline{
-    font-size:26px;
-    font-weight:800;
-    background:linear-gradient(90deg,var(--gold-strong),#ffd966);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    display:inline-block;
-    vertical-align:middle;
-  }
+.full-img-wrap img{
+  width:95%;
+  max-width:900px;
+  border-radius:12px;
+  display:block;
+  margin:auto;
+  box-shadow:0 0 25px rgba(255,200,40,0.25);
+}
 
-  .apk-card .version{
-    color:#ffd87a;
-    font-weight:700;
-    margin-bottom:10px;
-  }
-  .apk-btn{
-    display:block;
-    width:100%;
-    padding:14px;
-    border-radius:12px;
-    background: linear-gradient(90deg,#00ff7f,#00e66e);
-    color:#000;
-    text-decoration:none;
-    font-weight:800;
-    font-size:18px;
-    box-shadow:0 6px 25px rgba(0,255,140,0.25);
-    transition:transform .15s, box-shadow .15s;
-  }
-  .apk-btn:hover{ transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,255,140,0.35) }
+/* APK CARD */
+.apk-card{
+  width:90%;
+  max-width:480px;
+  margin:40px auto;
+  padding:24px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 0 35px rgba(255,200,50,0.15);
+}
 
-  .warning-box{
-    margin-top:14px;
-    background: rgba(255,255,255,0.03);
-    border-radius:10px;
-    padding:12px;
-    text-align:left;
-    border-left:3px solid #ffbb33;
-    color:#e6e6e6;
-    font-size:13px;
-  }
+.apk-btn{
+  display:block;
+  padding:14px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#0f0,#00e676);
+  color:#000;
+  font-weight:800;
+  font-size:18px;
+  text-decoration:none;
+  margin-top:10px;
+}
 
-  footer{
-    color:#aaa;
-    padding:36px 18px;
-    font-size:14px;
-  }
-
-  @media (max-width:520px){
-    .site-title{ font-size:30px }
-    .slideshow{ width:86vw; height:86vw }
-    .bio-box{ padding:16px; margin:18px 12px }
-    .gc-btn{ font-size:16px; padding:12px }
-    .apk-card{ padding:18px }
-    .banner-carousel img{ width:40vw; height:40vw }
-  }
+/* SMALL BUTTON bottom */
+.small-bottom-btn{
+  display:inline-block;
+  background:#444;
+  padding:10px 20px;
+  color:#fff;
+  border-radius:10px;
+  margin-top:14px;
+  font-size:15px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- PARTICLES -->
-<div id="particles"></div>
-<script>
-for (let i=0;i<70;i++){
-  const el = document.createElement('div');
-  el.className = 'particle';
-  const size = Math.random()*6+2;
-  el.style.width = el.style.height = size+'px';
-  el.style.left = Math.random()*100 + 'vw';
-  el.style.top = Math.random()*100 + 'vh';
-  el.style.animationDuration = (Math.random()*6 + 6) + 's';
-  el.style.opacity = (Math.random()*0.6 + 0.25);
-  document.getElementById('particles').appendChild(el);
-}
-</script>
+<!-- HEADER FIXED -->
+<div class="header-wrap">
+  <img src="myicon3.png" class="header-logo">
+  <div class="site-title">GOLD COIN</div>
+</div>
+<div class="subtitle">
+  Official website of Goldcoin Digital Virtual Currency — mine, earn, collect & play.
+</div>
 
-<!-- ICON + TITLE -->
-<img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="GOLD COIN Logo">
-<div class="site-title">GOLD COIN</div>
-<div class="subtitle">Official website of Goldcoin Digital Virtual Currency — play, mine, collect and earn rewards across a fun Web3 experience.</div>
-
-<!-- SLIDESHOW (centered) -->
+<!-- SLIDESHOW (unchanged) -->
 <div class="slideshow-wrapper">
   <div class="slideshow">
-    <img src="pic1.png" class="active" alt="pic1">
-    <img src="pic2.png" alt="pic2">
-    <img src="pic3.png" alt="pic3">
-    <img src="pic4.png" alt="pic4">
-    <img src="pic5.png" alt="pic5">
+    <img src="pic1.png" class="active">
+    <img src="pic2.png">
+    <img src="pic3.png">
+    <img src="pic4.png">
+    <img src="pic5.png">
   </div>
 </div>
 
-<!-- BIO BOX -->
+<!-- BIO -->
 <div class="bio-box">
-  Gold Coin Web3 is a Mining ⛏️ based digital coin platform offering mining, rewarded tasks, and interactive features.
-  Boost your balance, enjoy fun mechanics, and stay updated with new versions. Join the Gold Coin community and start earning today.
+  Gold Coin Web3 is a Mining ⛏️ based digital coin platform...
 </div>
 
 <!-- GOLD BUTTONS -->
@@ -354,45 +192,37 @@ for (let i=0;i<70;i++){
   <a class="gc-btn" href="/about.html"><i class="fa-solid fa-circle-info"></i> About Goldcoin</a>
 </div>
 
-<!-- BANNER CAROUSEL ABOVE DOWNLOAD -->
-<div class="banner-carousel">
-  <img src="banner1.png" alt="banner1">
-  <img src="banner2.png" alt="banner2">
+<!-- IMAGE FULL WIDTH FIXED -->
+<div class="full-img-wrap">
+  <img src="download.png" alt="Goldcoin Download Banner">
 </div>
 
-<!-- APK DOWNLOAD CARD (centered) -->
-<div class="apk-card-wrap">
-  <div class="apk-card" role="region" aria-label="Download Goldcoin APK">
-    <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon-gold" alt="GOLD COIN Logo">
-    <span class="gold-text-inline">GOLD COIN</span>
-    <div style="margin-top:6px; font-size:16px;">Download GOLDCOIN APK</div>
-    <div class="version">Goldcoin version v4.5</div>
+<!-- APK DOWNLOAD CARD -->
+<div class="apk-card">
+  <img src="myicon3.png" style="width:50px;border-radius:10px;">
+  <h2 style="color:var(--gold)">GOLDCOIN APK</h2>
 
-    <a class="apk-btn" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk" rel="noopener" target="_blank">
-      ⬇ Download Now (v4.5)
-    </a>
+  <a class="apk-btn" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">
+    ⬇ Download v4.5
+  </a>
 
-    <div class="warning-box">
-      <div style="color:#ffcc66; font-weight:700;">⚠ Before Installing the APK</div>
-      <p style="margin:8px 0 0;">To install this app, enable <b>Settings → Security → Install Unknown Apps</b> for your browser. Then open the downloaded file to install normally.</p>
-    </div>
-  </div>
+  <!-- small button bottom -->
+  <a class="small-bottom-btn" href="/app-ads.txt">app-ads.txt</a>
 </div>
 
 <footer>
-  ©️ Goldcoinweb3® Pvt Ltd 2017 — All Rights Reserved
+  © Goldcoinweb3® Pvt Ltd 2017 — All Rights Reserved
 </footer>
 
 <script>
 (function(){
-  const slides = document.querySelectorAll('.slideshow img');
-  let i = 0;
-  if(!slides.length) return;
-  setInterval(()=> {
-    slides[i].classList.remove('active');
-    i = (i+1) % slides.length;
-    slides[i].classList.add('active');
-  }, 3000);
+  const s=document.querySelectorAll('.slideshow img');
+  let i=0;
+  setInterval(()=>{
+    s[i].classList.remove('active');
+    i=(i+1)%s.length;
+    s[i].classList.add('active');
+  },3000);
 })();
 </script>
 </body>
