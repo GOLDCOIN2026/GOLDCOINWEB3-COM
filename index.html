@@ -15,7 +15,7 @@
 <!-- Canonical -->
 <link rel="canonical" href="https://goldcoinweb3.com/">
 
-<!-- Open Graph (Facebook, WhatsApp share preview) -->
+<!-- Open Graph -->
 <meta property="og:title" content="Gold Coin - Earn Coins & Download APK">
 <meta property="og:description" content="Download Goldcoin APK v4.5 and explore the newest features of the Gold Coin Web3 ecosystem.">
 <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
@@ -31,7 +31,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4">
 
-<!-- JSON-LD Schema (BEST for Google SEO) -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,7 +57,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------------- PARTICLES ---------------- */
 #particles {
     position: fixed;
     width: 100%;
@@ -79,9 +78,8 @@ body {
     100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
 }
 
-/* ---------------- ICON FIXED SMALL ---------------- */
 .icon {
-    width: 70px;  /* SMALLER */
+    width: 70px;
     margin-top: 25px;
     filter: drop-shadow(0 0 10px gold);
     animation: popIn 1.2s ease-out;
@@ -91,7 +89,6 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* ---------------- TITLE ---------------- */
 .title {
     margin-top: 10px;
     font-size: 58px;
@@ -107,7 +104,6 @@ body {
     100% { text-shadow: 0 0 25px #ffdd55; }
 }
 
-/* ---------------- SLIDESHOW ---------------- */
 .slideshow-container {
     width: 350px;
     height: 350px;
@@ -134,7 +130,6 @@ body {
     transform: rotateY(0deg) scale(1);
 }
 
-/* ---------------- BIO ---------------- */
 .bio-box {
     margin: 35px auto;
     max-width: 850px;
@@ -144,31 +139,91 @@ body {
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(5px);
     text-align: justify;
-    font-size: 18px;
+    font-size: 14px;
     color: #e8e8e8;
     line-height: 1.85;
     box-shadow: 0 0 18px rgba(212,175,55,0.3);
 }
 
-/* ---------------- DOWNLOAD BUTTON ---------------- */
-.btn-download {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #000;
-    background: linear-gradient(90deg, #00ff7f, #00e66e);
+/* ===== NEW FULL-WIDTH BUTTONS ===== */
+.big-link {
+    display: block;
+    width: 92%;
+    margin: 12px auto;
+    padding: 18px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    border: 2px solid rgba(255,215,0,0.4);
+    color: #fff;
     text-decoration: none;
-    box-shadow: 0 0 18px rgba(0,255,120,0.5);
-    transition: 0.2s;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(255,215,0,0.4);
+    transition: 0.25s;
 }
-.btn-download:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 28px rgba(0,255,120,0.8);
+.big-link:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(255,215,0,0.7);
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ===== Beautiful Download Card ===== */
+.dl-card {
+    width: 92%;
+    max-width: 450px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.08);
+}
+.dl-icon {
+    width: 80px;
+    margin-bottom: 15px;
+}
+.gold-text {
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffcc33, #ffd966);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.version {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffdb58;
+    margin: 10px 0 20px 0;
+}
+.btn-download {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #00ff7f, #00e66e);
+    color: #000;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(0,255,127,0.4);
+    margin-top: 10px;
+}
+.warning-box {
+    background: rgba(255,255,255,0.06);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-top: 25px;
+    border-left: 3px solid #ffbb33;
+    line-height: 1.5;
+}
+.warning-title {
+    color: #ffcc33;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
 footer {
     margin-top: 60px;
     padding: 35px;
@@ -176,6 +231,7 @@ footer {
     font-size: 14px;
 }
 </style>
+
 </head>
 
 <body>
@@ -183,7 +239,6 @@ footer {
 <div id="particles"></div>
 
 <script>
-// CREATE PARTICLES
 for (let i = 0; i < 60; i++) {
     const p = document.createElement("div");
     p.classList.add("particle");
@@ -194,12 +249,10 @@ for (let i = 0; i < 60; i++) {
 }
 </script>
 
-<!-- SMALLER CENTERED ICON -->
 <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="icon" alt="Gold Coin Logo">
 
 <div class="title">GOLD COIN</div>
 
-<!-- SLIDESHOW -->
 <div class="slideshow-container">
     <img src="pic11.png" class="active">
     <img src="pic12.png">
@@ -224,20 +277,53 @@ function rotateSlide() {
 setInterval(rotateSlide, 3000);
 </script>
 
-<!-- BIO -->
 <div class="bio-box">
-    Gold Coin is the ultimate digital experience for coin enthusiasts.<br><br>
-    Explore, collect, and engage with our platform designed to offer the smoothest mining and earning system.<br><br>
-    Boost your balance, enjoy interactive features, and stay updated with the latest versions.<br><br>
-    Begin your journey today and become part of the Golden Legacy.
+    🌟  Gold Coin is a next-generation digital platform designed for users who enjoy collecting, growing, and engaging with virtual assets.<br><br>
+    🌟 <b>Gold Coin delivers a simple, smooth, and enjoyable digital mining experience for everyone.</b><br><br>
+    🔍 Explore the app, collect daily rewards, and enjoy a system designed for stable, hassle-free earning.<br><br>
+    ⚡ Boost your balance, interact with engaging features, and stay updated as we continue improving the platform with new updates.<br><br>
+    🛡️ <b>Mining on Gold Coin is 100% free — no payments, no investment required.</b><br><br>
+    🪙 Every user receives <b>2 free coins per day</b>, guaranteed.<br><br>
+    🚀 Start your journey today and become part of the growing Gold Coin community..
 </div>
 
-<p style="margin-top:40px;">Download Goldcoin APK v4.5</p>
+<!-- ==================== 5 FULL WIDTH BUTTONS ==================== -->
+<a class="big-link" href="/whitepaper.html">📘 White Paper</a>
+<a class="big-link" href="/privacy.html">🔒 Privacy Policy</a>
+<a class="big-link" href="/term.html">📄 Terms of Use</a>
+<a class="big-link" href="/methodology.html">⚙ Methodology</a>
+<a class="big-link" href="/about.html">ℹ About</a>
 
-<a class="btn-download" href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">Download Now</a>
+<!-- FULL WIDTH IMAGE -->
+<img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/download.png?alt=media&token=847f2696-2432-4e76-8a3a-9d5b82c329ae" style="width:100%;margin-top:25px;border-radius:15px;">
+
+<!-- ==================== DOWNLOAD CARD ==================== -->
+<div class="dl-card">
+    <img src="https://firebasestorage.googleapis.com/v0/b/gold-coin-2026/o/myicon3.png?alt=media&token=1c47b51b-b1c4-4e66-b2cb-7f105594fcf4" class="dl-icon">
+
+    <div class="gold-text">GOLD COIN</div>
+    <h3 style="margin-top:5px;">Download GOLDCOIN APK</h3>
+
+    <p style="opacity:0.8;font-size:14px;">Latest available version:</p>
+
+    <div class="version">Goldcoin version v4.5</div>
+
+    <a class="btn-download" 
+       href="https://ia801701.us.archive.org/2/items/goldcoinweb-3-v-4.5/GOLDCOINWEB3%20v4.5.apk">
+        Download Now
+    </a>
+
+    <div class="warning-box">
+        <div class="warning-title">⚠ Before Installing the APK</div>
+        <p>To install this app, enable:</p>
+        <p><b>Settings → Security → Install Unknown Apps</b></p>
+        <p>Allow Chrome/Brave to install APK files.</p>
+        <p style="margin-top:6px;">Then open the downloaded file to install.</p>
+    </div>
+</div>
 
 <footer>
-© 2025 GOLD COIN — All Rights Reserved.
+© 2017-2025 GOLD COIN® — All Rights Reserved.
 </footer>
 
 </body>
