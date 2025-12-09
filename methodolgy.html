@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Methodology — GoldCoin Mining & Network Design</title>
+<style>
+  :root{
+    --bg:#0b0b0c;
+    --card:#121212;
+    --gold:#d4af37;
+    --muted:#cfcfcf;
+    --accent:linear-gradient(90deg,var(--gold),#f5e28b);
+  }
+  html,body{height:100%;margin:0;background:var(--bg);color:#efefef;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.6}
+  header{padding:20px;border-bottom:1px solid rgba(212,175,55,0.08);text-align:center}
+  header h1{margin:0;font-size:28px;background:var(--accent);-webkit-background-clip:text;color:transparent;font-weight:700}
+  .container{max-width:980px;margin:28px auto;padding:0 18px}
+  .meta{color:var(--muted);text-align:center;margin:12px 0 26px}
+  .card{background:var(--card);border-radius:12px;padding:22px;margin-bottom:20px;border:1px solid rgba(212,175,55,0.06);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+  .card h2{margin:0 0 10px;color:var(--gold);font-size:20px}
+  .small{color:var(--muted);font-size:14px;margin-bottom:12px}
+  h3{margin:14px 0 8px;color:#fff;font-size:16px}
+  p,li{color:#d9d9d9;font-size:15px}
+  ul{margin:8px 0 0 20px;padding:0}
+  .two-col{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:880px){.two-col{grid-template-columns:1fr 1fr;gap:20px}}
+  .codebox{background:#0a0a0a;border:1px dashed rgba(255,255,255,0.04);padding:12px;border-radius:8px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+  .note{background:rgba(212,175,55,0.06);border-left:4px solid var(--gold);padding:12px;border-radius:8px;color:#fff}
+  .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;background:var(--gold);color:#000;font-weight:700;text-decoration:none}
+  footer{color:var(--muted);text-align:center;padding:28px 0;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Methodology — GoldCoin Mining & Network Design</h1>
+</header>
+
+<div class="container">
+
+  <p class="meta">Focused on pragmatic, mobile-first mining, fair rewards, anti-cheat, and long-term network sustainability.</p>
+
+  <!-- Overview -->
+  <section class="card">
+    <h2>Overview</h2>
+    <p class="small">This document explains the practical mining methodology we use for GoldCoin, combining proven ideas from established digital-currency systems with mobile-optimized techniques and strong security controls. The goal is not to promise financial returns but to describe how coins are issued, validated, and protected in a way that is fair, scalable, and resistant to abuse.</p>
+
+    <h3>Principles</h3>
+    <ul>
+      <li>Mobile-first: lightweight client work, heavy validation on secure servers.</li>
+      <li>Fairness: deterministic daily baseline rewards (e.g., 2 free coins/day) plus additional earned rewards with clear limits.</li>
+      <li>Anti-abuse: server timestamps, device attestation, and multi-layer fraud detection.</li>
+      <li>Transparency: auditable logs and a predictable issuance schedule.</li>
+    </ul>
+  </section>
+
+  <!-- Consensus & Issuance -->
+  <section class="card">
+    <h2>Consensus & Coin Issuance</h2>
+
+    <h3>Hybrid, Practical Approach</h3>
+    <p>GoldCoin does not run as a public, permissionless layer-1 blockchain in the classic sense. Instead we use a hybrid methodology that takes ideas from Proof-of-Work (PoW) and Proof-of-Stake (PoS) systems but adapts them for a controlled, scalable environment:</p>
+    <ul>
+      <li><b>On-device activity</b> — the mobile client performs low-cost, verifiable tasks (timed sessions, puzzle checks, or ad-watched confirmations) to qualify a user for rewards. These tasks are intentionally lightweight to avoid battery drain.</li>
+      <li><b>Server-side validation</b> — the server (managed by GoldCoin) validates activity using signed messages, cryptographic checks, and device attestation before awarding coins. All timestamps are server-generated to eliminate local clock manipulation.</li>
+      <li><b>Issuance policy</b> — coins are created according to a fixed emission schedule that includes baseline free daily coins and additional variable rewards. Emission is throttled by global limits and halving-like mechanics to ensure long-term scarcity.</li>
+    </ul>
+
+    <div class="note" style="margin-top:12px">
+      <strong>Why this model?</strong> Fully decentralized PoW is energy-heavy and not practical for mobile-first consumer apps. Our hybrid model preserves security and fairness while remaining battery-friendly and easy to operate at scale.
+    </div>
+  </section>
+
+  <!-- Mining Methodology -->
+  <section class="card">
+    <h2>Mining Methodology (Detailed)</h2>
+
+    <div class="two-col">
+      <div>
+        <h3>1. Qualification Layer (Client)</h3>
+        <p>Users qualify for rewards by performing lightweight on-device activities. Examples include:</p>
+        <ul>
+          <li>Watching rewarded ads (verified via ad network callbacks)</li>
+          <li>Completing short interactive tasks (spin, mini-game completion)</li>
+          <li>Running a validated "session" for a minimum time (server checks session proofs)</li>
+        </ul>
+        <p>Each qualification action produces a signed proof (HMAC or signed token) that the client sends to the backend.</p>
+      </div>
+
+      <div>
+        <h3>2. Validation Layer (Server)</h3>
+        <p>The backend validates proofs using multiple signals:</p>
+        <ul>
+          <li>Server timestamps & replay protection — every proof is time-stamped and single-use.</li>
+          <li>Device attestation — checks for genuine device signatures or SafetyNet / Play Integrity attestation.</li>
+          <li>Reward rate limiting — per-device and per-account limits (e.g., max boosted rewards/day).</li>
+          <li>Behavioral heuristics — detect automation, impossible speeds, or mass-account farms.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14px">3. Issuance & Accounting</h3>
+    <p>Once validated, the server updates authoritative accounting records (e.g., Firestore or an equivalent ledger):</p>
+    <ul>
+      <li>Atomic updates: wallet balance and transaction logs are updated in a single atomic operation to prevent inconsistencies.</li>
+      <li>Withdrawal queuing: withdrawals are moved to a queue and processed by audit rules and optional manual review to prevent fraud.</li>
+      <li>Emission control: global counters ensure the platform respects emission caps and scheduled adjustments (e.g., periodic reductions or supply windows).</li>
+    </ul>
+
+    <h3 style="margin-top:12px">4. Transparency & Audit</h3>
+    <p>Publicly visible summaries and internal audit logs are maintained so the operations team and users can track overall issuance and major events. Important events (major releases, emission schedule changes) are announced clearly.</p>
+  </section>
+
+  <!-- Consensus Variants Explained -->
+  <section class="card">
+    <h2>Consensus Variants (Context & Influences)</h2>
+
+    <p class="small">Below are short descriptions of consensus approaches that influenced GoldCoin's methodology. We adapt the useful parts for a mobile reward ecosystem.</p>
+
+    <h3>Proof-of-Work (PoW)</h3>
+    <p>PoW relies on computational work (hashing) to secure the network. It’s robust but energy-intensive — not suitable for mobile mining at scale.</p>
+
+    <h3>Proof-of-Stake (PoS)</h3>
+    <p>PoS secures networks by staking value. It reduces energy usage but depends on stake distribution. Elements of stake economics (reward curves, slashing incentives) inform GoldCoin's emission design.</p>
+
+    <h3>Delegated / Hybrid Models</h3>
+    <p>Delegated PoS and hybrid approaches provide fast finality and governance benefits. GoldCoin borrows the idea of trusted validators for selected server operations (e.g., governance, audits) while keeping user experience simple.</p>
+
+    <h3>Proofs of Useful Work</h3>
+    <p>Some systems require useful computation (scientific tasks). For GoldCoin, the "useful" work is user engagement (ad views, gameplay) verified securely — aligning rewards with measurable user actions.</p>
+  </section>
+
+  <!-- Security Touch -->
+  <section class="card">
+    <h2>Security Considerations</h2>
+
+    <h3>Device & App Integrity</h3>
+    <p>GoldCoin uses device attestation and APK tamper detection to block modified clients. We also maintain an allowlist of official APK builds and revoke tokens issued to unknown binaries.</p>
+
+    <h3>Server Hardening</h3>
+    <ul>
+      <li>HTTPS/TLS enforced for all endpoints</li>
+      <li>Rate limiting, WAF, and IP reputation checks</li>
+      <li>Database access scoped with least privilege</li>
+    </ul>
+
+    <h3>Data Protection</h3>
+    <p>Sensitive data is encrypted at rest and in transit. Private keys for system use are kept in HSMs or KMS solutions and never exposed to client apps.</p>
+
+    <div class="note">Operational security must evolve. Frequent audits, rotating keys, and continuous monitoring keep the system resilient to new attack vectors.</div>
+  </section>
+
+  <!-- Tokenomics & Incentives -->
+  <section class="card">
+    <h2>Tokenomics & Incentives</h2>
+    <p>Designing incentives is central to lasting engagement and network health:</p>
+    <ul>
+      <li><b>Baseline daily reward:</b> a fixed, free allotment that encourages daily return (for example, 2 free coins/day).</li>
+      <li><b>Earned rewards:</b> proportional to validated contributions (ads watched, session time, successful spins), with caps per period to avoid inflation.</li>
+      <li><b>Reward decay / halving:</b> periodic decreases in extra reward rates to enforce scarcity over time.</li>
+      <li><b>Referral & retention bonuses:</b> controlled referral rewards and retention multipliers with anti-abuse checks.</li>
+    </ul>
+
+    <h3 style="margin-top:10px">Anti-Inflation Controls</h3>
+    <p>Automatic throttles, burn mechanisms (if applicable), and audit-based reversals for fraudulent issuance are used to keep supply predictable and fair.</p>
+  </section>
+
+  <!-- Implementation Notes -->
+  <section class="card">
+    <h2>Implementation Notes & Best Practices</h2>
+
+    <ul>
+      <li><b>Server timestamps only:</b> never trust device clocks for reward calculations.</li>
+      <li><b>Signed proofs:</b> use short-lived signed tokens for each user action (HMAC or asymmetric signatures).</li>
+      <li><b>Stateless client, stateful server:</b> keep minimal client state to reduce attack surface.</li>
+      <li><b>Monitoring & alerts:</b> anomaly detection for spikes in reward claims, geolocation mismatches, and device-family clusters.</li>
+      <li><b>Manual review pipeline:</b> automated blocking plus a human review queue for edge cases and high-value withdrawals.</li>
+    </ul>
+
+    <div class="codebox" style="margin-top:12px">
+      Example (high-level):<br/>
+      Client -> obtains short-lived challenge -> completes verified task -> sends signed proof -> Server validates challenge & attestation -> updates user ledger atomically -> returns receipt
+    </div>
+  </section>
+
+  <!-- Ethics & Compliance -->
+  <section class="card">
+    <h2>Ethics, Compliance & User Safety</h2>
+    <p>We prioritize: user consent, clear communication about how rewards are earned, data minimization, and compliance with laws (privacy, anti-money-laundering where applicable). High-value withdrawals may require identity verification per local regulations.</p>
+  </section>
+
+  <!-- Closing -->
+  <section class="card">
+    <h2>Summary</h2>
+    <p>GoldCoin's methodology blends lightweight client proofs, strong server-side validation, predictable issuance rules, and layered security. This approach enables a mobile-friendly reward experience without relying on energy-heavy public PoW, while keeping fairness and transparency central.</p>
+    <a class="cta" href="/whitepaper.html">Read Full Whitepaper</a>
+  </section>
+
+  <footer>
+    © <span id="year"></span> GoldCoin — Methodology & Security. All rights reserved.
+  </footer>
+
+</div>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
