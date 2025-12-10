@@ -41,4 +41,46 @@
     <priority>0.1</priority>
   </url>
 
+  <!-- NEW PAGES -->
+
+  <!-- Whitepaper -->
+  <url>
+    <loc>https://goldcoinweb3.com/whitepaper.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://goldcoinweb3.com/term.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://goldcoinweb3.com/about.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Methodology -->
+  <url>
+    <loc>https://goldcoinweb3.com/methodology.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://goldcoinweb3.com/privacy.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
