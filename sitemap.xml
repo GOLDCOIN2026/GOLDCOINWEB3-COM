@@ -1,68 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Homepage -->
   <url>
     <loc>https://goldcoinweb3.com/</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- app-ads.txt -->
+  <!-- APK Page -->
   <url>
-    <loc>https://goldcoinweb3.com/app-ads.txt</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
-  <!-- APK page -->
-  <url>
-    <loc>https://goldcoinweb3.com/apk</loc>
-    <lastmod>2025-11-24</lastmod>
+    <loc>https://goldcoinweb3.com/apk.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Index page -->
-  <url>
-    <loc>https://goldcoinweb3.com/index</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Google verification -->
-  <url>
-    <loc>https://goldcoinweb3.com/google53522064b57731a7.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
-  <!-- NEW PAGES -->
-
   <!-- Whitepaper -->
   <url>
     <loc>https://goldcoinweb3.com/whitepaper.html</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Terms -->
-  <url>
-    <loc>https://goldcoinweb3.com/term.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
 
   <!-- About -->
   <url>
     <loc>https://goldcoinweb3.com/about.html</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -70,15 +32,20 @@
   <!-- Methodology -->
   <url>
     <loc>https://goldcoinweb3.com/methodology.html</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://goldcoinweb3.com/term.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Privacy Policy -->
   <url>
     <loc>https://goldcoinweb3.com/privacy.html</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
