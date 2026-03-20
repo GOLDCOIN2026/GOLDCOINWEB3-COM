@@ -1,21 +1,122 @@
-<!-- WHITEPAPER SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gold Coin Whitepaper</title>
+
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #111827);
+    color: #fff;
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.25);
+}
+
+/* TEXT */
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+}
+
+.subtitle {
+    opacity: 0.7;
+}
+
+.highlight {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #facc15;
+}
+
+.section-title {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.note {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* CHART */
+.chart-container {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    margin: 25px auto;
+}
+</style>
+
+</head>
+
+<body>
+
 <div class="container">
 
     <!-- HEADER -->
     <div class="card center">
         <h1 class="main-title">🪙 GOLD COIN (GDC)</h1>
         <p class="subtitle">Decentralized Mining • Real Utility • Secure Ecosystem</p>
-        <p class="highlight">Initial Value: <b>$1 / GDC</b> | Total Supply: <b>100,000,000 GDC</b></p>
+        <p class="highlight">$1 / GDC • 100,000,000 Supply</p>
+        <p style="opacity:0.6; font-size:13px;">
+            Powered by Binance Smart Chain • Fast • Secure • Scalable
+        </p>
     </div>
 
     <!-- INTRO -->
     <div class="card">
         <div class="card-title">🚀 Introduction</div>
         <p>
-            Gold Coin (GDC) is a next-generation Web3 ecosystem designed to bring real 
-            value through mobile mining, gamified rewards, and decentralized ownership. 
-            Built on the Binance Smart Chain (BEP20), Gold Coin ensures scalability, 
-            low fees, and global accessibility.
+            Gold Coin (GDC) is a next-generation Web3 ecosystem built on BEP20, 
+            combining mobile mining, gamification, and real blockchain utility. 
+            It enables users worldwide to earn, engage, and participate in a 
+            decentralized digital economy.
         </p>
     </div>
 
@@ -23,74 +124,70 @@
     <div class="card">
         <div class="card-title">📊 Tokenomics</div>
 
-        <div class="section-title">Total Supply</div>
-        <p><b>100,000,000 GDC (Fixed Supply)</b></p>
+        <p><b>Total Supply:</b> 100,000,000 GDC (Fixed)</p>
 
-        <div class="section-title">Distribution</div>
+        <!-- CHART -->
+        <div class="chart-container">
+            <canvas id="tokenChart"></canvas>
+        </div>
+
         <ul>
-            <li>⛏️ Mining Rewards — 30%</li>
-            <li>👥 Referral Rewards — 20%</li>
-            <li>🎮 Games, Boost & Spin — 15%</li>
-            <li>💧 Liquidity & Exchanges — 15%</li>
-            <li>🏗️ Development & Ecosystem — 10%</li>
-            <li>📢 Marketing & Growth — 5%</li>
-            <li>🔐 Reserve Fund — 5%</li>
+            <li>⛏️ Mining — 30%</li>
+            <li>👥 Referral — 20%</li>
+            <li>🎮 Games/Boost — 15%</li>
+            <li>💧 Liquidity — 15%</li>
+            <li>🏗️ Development — 10%</li>
+            <li>📢 Marketing — 5%</li>
+            <li>🔐 Reserve — 5%</li>
         </ul>
 
-        <div class="section-title">Initial Value</div>
-        <p>
-            Gold Coin starts with an internal ecosystem value of 
-            <b>$1 per GDC</b>, designed to grow with adoption and utility.
-        </p>
+        <p><b>Initial Value:</b> $1 per GDC</p>
     </div>
 
-    <!-- EARNING MODEL -->
+    <!-- EARNING -->
     <div class="card">
         <div class="card-title">⛏️ User Earning Model</div>
 
-        <p>Users can earn Gold Coin daily through multiple streams:</p>
-
         <ul>
-            <li>⛏️ Mining: ~1 GDC / day</li>
-            <li>👥 Referral: ~2 GDC / day (average)</li>
-            <li>⚡ Boost / 🎰 Spin / 🎮 Games: ~1 GDC / day</li>
+            <li>⛏️ Mining: ~1 GDC/day</li>
+            <li>👥 Referral: ~2 GDC/day</li>
+            <li>🎮 Boost/Spin/Game: ~1 GDC/day</li>
         </ul>
 
         <p class="note">
-            This balanced earning system ensures sustainability while keeping 
-            user engagement high.
+            Balanced earning ensures sustainability and long-term growth.
         </p>
     </div>
 
-    <!-- WITHDRAW SYSTEM -->
+    <!-- WITHDRAW -->
     <div class="card">
         <div class="card-title">💼 Withdrawal System</div>
 
         <p>
-            Only <b>30% of total user balance</b> is withdrawable, representing 
-            real mined coins. The remaining 70% are utility-based bonus coins.
+            Only 30% of balance is withdrawable (real mined coins).
+            Remaining 70% is engagement-based utility.
         </p>
 
         <ul>
-            <li>✅ Minimum Withdraw: 400 GDC</li>
-            <li>🔒 70% Locked (Engagement Layer)</li>
-            <li>💰 30% Unlocked (Real Value Coins)</li>
+            <li>Minimum Withdraw: 400 GDC</li>
+            <li>70% Locked</li>
+            <li>30% Unlocked</li>
         </ul>
     </div>
 
     <!-- BLOCKCHAIN -->
     <div class="card">
-        <div class="card-title">⛓️ Blockchain Details</div>
+        <div class="card-title">⛓️ Blockchain</div>
 
         <ul>
-            <li>Network: Binance Smart Chain (BEP20)</li>
-            <li>Fast & Low Transaction Fees</li>
-            <li>Smart Contract Verified</li>
-            <li>Decentralized & Transparent</li>
+            <li>BEP20 (Binance Smart Chain)</li>
+            <li>Low Fees</li>
+            <li>Fast Transactions</li>
+            <li>Transparent & Secure</li>
         </ul>
     </div>
 
-    <!-- SUPPORTED WALLETS -->
+    <!-- WALLETS -->
     <div class="card">
         <div class="card-title">👛 Supported Wallets</div>
 
@@ -105,50 +202,38 @@
 
     <!-- SECURITY -->
     <div class="card">
-        <div class="card-title">🔐 Security Model</div>
+        <div class="card-title">🔐 Security</div>
 
-        <div class="section-title">User Protection</div>
-        <p>
-            Gold Coin ensures strict device-level security, preventing multiple 
-            accounts and fraudulent activities.
-        </p>
-
-        <div class="section-title">System Security</div>
         <ul>
-            <li>📡 Server-based timestamps (no device manipulation)</li>
-            <li>📵 Emulator & bot protection</li>
-            <li>🔒 Encrypted transactions</li>
-            <li>🛡️ Ad-based verified rewards system</li>
+            <li>Server Time Validation</li>
+            <li>Anti-Bot System</li>
+            <li>Device-Level Protection</li>
+            <li>Ad Verified Rewards</li>
         </ul>
     </div>
 
     <!-- ECOSYSTEM -->
     <div class="card">
-        <div class="card-title">🌐 Ecosystem Vision</div>
-
-        <p>
-            Gold Coin aims to build a global decentralized economy powered by 
-            real users, not artificial mining farms.
-        </p>
+        <div class="card-title">🌐 Ecosystem</div>
 
         <ul>
-            <li>🎮 Integrated Games Economy</li>
-            <li>🏆 Automated Leaderboards</li>
-            <li>💱 Token Conversion System</li>
-            <li>🚗 Future Game Expansion (Gold Rush Drive)</li>
+            <li>Games Economy</li>
+            <li>Leaderboard System</li>
+            <li>Token Converter</li>
+            <li>Gold Rush Drive Game</li>
         </ul>
     </div>
 
-    <!-- FUTURE ROADMAP -->
+    <!-- ROADMAP -->
     <div class="card">
         <div class="card-title">🛣️ Roadmap</div>
 
         <ul>
-            <li>✔ Mobile Mining Launch</li>
-            <li>✔ Reward System Integration</li>
-            <li>🔜 Exchange Listings</li>
-            <li>🔜 Smart Contract Deployment</li>
-            <li>🔜 Full Web3 Expansion</li>
+            <li>✔ Mining Launch</li>
+            <li>✔ Reward System</li>
+            <li>🔜 Exchange Listing</li>
+            <li>🔜 Smart Contract</li>
+            <li>🔜 Web3 Expansion</li>
         </ul>
     </div>
 
@@ -156,7 +241,55 @@
     <div class="card center">
         <h2>⚡ Gold Coin (GDC)</h2>
         <p>We are strong enough to hold the value.</p>
-        <p><b>Official Website:</b> https://goldcoinweb3.com/</p>
+        <p>https://goldcoinweb3.com/</p>
     </div>
 
 </div>
+
+<!-- CHART SCRIPT -->
+<script>
+const ctx = document.getElementById('tokenChart');
+
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [
+            'Mining',
+            'Referral',
+            'Games',
+            'Liquidity',
+            'Development',
+            'Marketing',
+            'Reserve'
+        ],
+        datasets: [{
+            data: [30,20,15,15,10,5,5],
+            backgroundColor: [
+                '#facc15',
+                '#22c55e',
+                '#3b82f6',
+                '#a855f7',
+                '#f97316',
+                '#14b8a6',
+                '#ef4444'
+            ]
+        }]
+    },
+    options: {
+        cutout: '70%',
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#fff'
+                }
+            }
+        },
+        animation: {
+            duration: 2000
+        }
+    }
+});
+</script>
+
+</body>
+</html>
