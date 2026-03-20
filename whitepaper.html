@@ -1,225 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Goldcoin White Paper</title>
+<!-- WHITEPAPER SECTION -->
+<div class="container">
 
-<style>
-    body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: #0b0c10;
-        color: #eaeaea;
-    }
+    <!-- HEADER -->
+    <div class="card center">
+        <h1 class="main-title">🪙 GOLD COIN (GDC)</h1>
+        <p class="subtitle">Decentralized Mining • Real Utility • Secure Ecosystem</p>
+        <p class="highlight">Initial Value: <b>$1 / GDC</b> | Total Supply: <b>100,000,000 GDC</b></p>
+    </div>
 
-    .gradient-bg {
-        background: linear-gradient(145deg, #0a0a0a, #111113);
-        min-height: 100vh;
-    }
+    <!-- INTRO -->
+    <div class="card">
+        <div class="card-title">🚀 Introduction</div>
+        <p>
+            Gold Coin (GDC) is a next-generation Web3 ecosystem designed to bring real 
+            value through mobile mining, gamified rewards, and decentralized ownership. 
+            Built on the Binance Smart Chain (BEP20), Gold Coin ensures scalability, 
+            low fees, and global accessibility.
+        </p>
+    </div>
 
-    header {
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-    }
+    <!-- TOKENOMICS -->
+    <div class="card">
+        <div class="card-title">📊 Tokenomics</div>
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-    }
+        <div class="section-title">Total Supply</div>
+        <p><b>100,000,000 GDC (Fixed Supply)</b></p>
 
-    .back-btn {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 14px;
-        border: 1px solid gold;
-        background: transparent;
-        color: gold;
-        border-radius: 8px;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: 500;
-        transition: 0.3s;
-    }
+        <div class="section-title">Distribution</div>
+        <ul>
+            <li>⛏️ Mining Rewards — 30%</li>
+            <li>👥 Referral Rewards — 20%</li>
+            <li>🎮 Games, Boost & Spin — 15%</li>
+            <li>💧 Liquidity & Exchanges — 15%</li>
+            <li>🏗️ Development & Ecosystem — 10%</li>
+            <li>📢 Marketing & Growth — 5%</li>
+            <li>🔐 Reserve Fund — 5%</li>
+        </ul>
 
-    .back-btn:hover {
-        background: gold;
-        color: black;
-    }
+        <div class="section-title">Initial Value</div>
+        <p>
+            Gold Coin starts with an internal ecosystem value of 
+            <b>$1 per GDC</b>, designed to grow with adoption and utility.
+        </p>
+    </div>
 
-    h1 {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        background: linear-gradient(to right, gold, #f5e28b);
-        -webkit-background-clip: text;
-        color: transparent;
-        margin-top: 10px;
-    }
+    <!-- EARNING MODEL -->
+    <div class="card">
+        <div class="card-title">⛏️ User Earning Model</div>
 
-    .card {
-        background: #141414;
-        border: 1px solid rgba(255, 215, 0, 0.2);
-        border-radius: 14px;
-        padding: 25px;
-        margin-bottom: 25px;
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.06);
-    }
+        <p>Users can earn Gold Coin daily through multiple streams:</p>
 
-    .card-title {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: gold;
-    }
+        <ul>
+            <li>⛏️ Mining: ~1 GDC / day</li>
+            <li>👥 Referral: ~2 GDC / day (average)</li>
+            <li>⚡ Boost / 🎰 Spin / 🎮 Games: ~1 GDC / day</li>
+        </ul>
 
-    .card p {
-        line-height: 1.7;
-        color: #cfcfcf;
-        font-size: 16px;
-    }
+        <p class="note">
+            This balanced earning system ensures sustainability while keeping 
+            user engagement high.
+        </p>
+    </div>
 
-    .section-title {
-        font-size: 19px;
-        margin-top: 20px;
-        font-weight: 600;
-        color: #ffffff;
-    }
+    <!-- WITHDRAW SYSTEM -->
+    <div class="card">
+        <div class="card-title">💼 Withdrawal System</div>
 
-    .download-btn {
-        padding: 14px 30px;
-        background: linear-gradient(to right, gold, #f5e28b);
-        color: black;
-        border: none;
-        border-radius: 10px;
-        font-size: 18px;
-        margin-top: 10px;
-        cursor: not-allowed;
-        opacity: 0.6;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
+        <p>
+            Only <b>30% of total user balance</b> is withdrawable, representing 
+            real mined coins. The remaining 70% are utility-based bonus coins.
+        </p>
 
-    .center {
-        text-align: center;
-    }
+        <ul>
+            <li>✅ Minimum Withdraw: 400 GDC</li>
+            <li>🔒 70% Locked (Engagement Layer)</li>
+            <li>💰 30% Unlocked (Real Value Coins)</li>
+        </ul>
+    </div>
 
-    .icon {
-        font-size: 24px;
-        color: gold;
-    }
-</style>
-</head>
+    <!-- BLOCKCHAIN -->
+    <div class="card">
+        <div class="card-title">⛓️ Blockchain Details</div>
 
-<body>
+        <ul>
+            <li>Network: Binance Smart Chain (BEP20)</li>
+            <li>Fast & Low Transaction Fees</li>
+            <li>Smart Contract Verified</li>
+            <li>Decentralized & Transparent</li>
+        </ul>
+    </div>
 
-<div class="gradient-bg">
+    <!-- SUPPORTED WALLETS -->
+    <div class="card">
+        <div class="card-title">👛 Supported Wallets</div>
 
-    <!-- Header -->
-    <header>
-        <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-            <a href="/" class="back-btn">⬅ Back to Home</a>
-        </div>
-        <h1>Goldcoin White Paper</h1>
-    </header>
+        <ul>
+            <li>Trust Wallet</li>
+            <li>MetaMask</li>
+            <li>Binance Wallet</li>
+            <li>SafePal</li>
+            <li>TokenPocket</li>
+        </ul>
+    </div>
 
-    <main class="container">
+    <!-- SECURITY -->
+    <div class="card">
+        <div class="card-title">🔐 Security Model</div>
 
-        <!-- INTRODUCTION -->
-        <div class="card">
-            <div class="card-title"><span class="icon">📄</span> Goldcoin Technical White Paper</div>
-            <p>
-                Goldcoin introduces a next-generation approach to digital mining by combining 
-                blockchain security with user-friendly mobile technology.  
-                This document explains the architecture, algorithms, and economic model behind 
-                the Goldcoin ecosystem.
-            </p>
-        </div>
+        <div class="section-title">User Protection</div>
+        <p>
+            Gold Coin ensures strict device-level security, preventing multiple 
+            accounts and fraudulent activities.
+        </p>
 
-        <!-- TECHNICAL OVERVIEW -->
-        <div class="card">
-            <div class="card-title"><span class="icon">⚙️</span> Technical Overview</div>
+        <div class="section-title">System Security</div>
+        <ul>
+            <li>📡 Server-based timestamps (no device manipulation)</li>
+            <li>📵 Emulator & bot protection</li>
+            <li>🔒 Encrypted transactions</li>
+            <li>🛡️ Ad-based verified rewards system</li>
+        </ul>
+    </div>
 
-            <div class="section-title">Consensus Algorithm</div>
-            <p>
-                Goldcoin uses a hybrid Proof-of-Work + Proof-of-Stake consensus system, 
-                delivering strong security and efficiency across all devices.
-            </p>
+    <!-- ECOSYSTEM -->
+    <div class="card">
+        <div class="card-title">🌐 Ecosystem Vision</div>
 
-            <div class="section-title">Mobile Mining Engine</div>
-            <p>
-                Our Mobile Mining Engine (MME) allows smooth, power-optimized mining on 
-                smartphones without overheating or battery drain, utilizing advanced 
-                performance balancing.
-            </p>
+        <p>
+            Gold Coin aims to build a global decentralized economy powered by 
+            real users, not artificial mining farms.
+        </p>
 
-            <div class="section-title">Blockchain Architecture</div>
-            <p>
-                The system runs on a scalable sharded blockchain with dynamic load 
-                distribution ensuring fast transaction times and robust network integrity.
-            </p>
-        </div>
+        <ul>
+            <li>🎮 Integrated Games Economy</li>
+            <li>🏆 Automated Leaderboards</li>
+            <li>💱 Token Conversion System</li>
+            <li>🚗 Future Game Expansion (Gold Rush Drive)</li>
+        </ul>
+    </div>
 
-        <!-- SECURITY -->
-        <div class="card">
-            <div class="card-title"><span class="icon">🔐</span> Security & Privacy</div>
+    <!-- FUTURE ROADMAP -->
+    <div class="card">
+        <div class="card-title">🛣️ Roadmap</div>
 
-            <div class="section-title">Cryptographic Protection</div>
-            <p>
-                Goldcoin implements AES-256 encryption with Elliptic Curve Cryptography (ECC) 
-                ensuring complete data protection and secure wallet operations.
-            </p>
+        <ul>
+            <li>✔ Mobile Mining Launch</li>
+            <li>✔ Reward System Integration</li>
+            <li>🔜 Exchange Listings</li>
+            <li>🔜 Smart Contract Deployment</li>
+            <li>🔜 Full Web3 Expansion</li>
+        </ul>
+    </div>
 
-            <div class="section-title">Privacy Layers</div>
-            <p>
-                Zero-knowledge proofs and ring signatures safeguard user identities while 
-                keeping transactions transparent on the blockchain.
-            </p>
-
-            <div class="section-title">Multi-Layer Security Model</div>
-            <p>
-                Additional layers include biometric login, 2FA, and hardware-verified 
-                encryption for enhanced protection.
-            </p>
-        </div>
-
-        <!-- ECONOMIC MODEL -->
-        <div class="card">
-            <div class="card-title"><span class="icon">💰</span> Economic Model</div>
-
-            <div class="section-title">Mining Rewards</div>
-            <p>
-                Mining rewards follow a halving cycle every 210,000 blocks starting from 
-                50 GC per block — ensuring a long-term deflationary system.
-            </p>
-
-            <div class="section-title">Transaction Fees</div>
-            <p>
-                Fees automatically adjust based on network usage, ensuring optimal miner 
-                rewards while maintaining system affordability.
-            </p>
-        </div>
-
-        <!-- DOWNLOAD -->
-        <div class="card center">
-            <h2 class="section-title">Complete White Paper</h2>
-            <p>
-                The downloadable version containing extended algorithms,  
-                diagrams, and developer documentation will be available soon.
-            </p>
-
-            <button class="download-btn">📄 Download PDF (Coming Soon)</button>
-        </div>
-
-    </main>
+    <!-- FOOTER -->
+    <div class="card center">
+        <h2>⚡ Gold Coin (GDC)</h2>
+        <p>We are strong enough to hold the value.</p>
+        <p><b>Official Website:</b> https://goldcoinweb3.com/</p>
+    </div>
 
 </div>
-
-</body>
-</html>
